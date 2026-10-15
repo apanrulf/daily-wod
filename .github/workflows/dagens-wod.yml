@@ -1,0 +1,57 @@
+name: Dagens WOD
+
+on:
+  schedule:
+    # Tiden anges i UTC. 05:17 UTC = 07:17 svensk sommartid, 06:17 vintertid.
+    - cron: "17 5 * * *"
+  workflow_dispatch: # Gör att du kan köra flödet för hand under fliken Actions.
+
+permissions:
+  contents: write # Behövs för att lägga upp bilden och spara historiken i repot.
+
+concurrency:
+  group: dagens-wod
+  cancel-in-progress: false
+
+jobs:
+  wod:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Skriv dagens WOD och gör bilden
+        run: python main.py wod-skapa --auto
+
+      - name: Lägg upp bilden i repot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add wods.json bilder/
+          git diff --cached --quiet || git commit -m "WOD $(date -u +%F)"
+          git push
+
+      - name: Publicera på Instagram
+        run: |
+          # Instagram hämtar bilden direkt från det publika repot. Adressen pekar på
+          # just den här commiten, så att ingen gammal cachad version kan komma emellan.
+          export BILD_BAS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$(git rev-parse HEAD)"
+          python main.py wod-publicera --auto
+
+      - name: Spara att det är publicerat
+        if: always()
+        run: |
+          git add wods.json
+          git diff --cached --quiet || git commit -m "Publicerat WOD $(date -u +%F)"
+          git push
