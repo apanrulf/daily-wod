@@ -25,8 +25,14 @@ Reply with only a JSON object inside <wod></wod> tags, with exactly these keys:
   "workout": ["One line per row exactly as it should appear on the image, max 12 lines (keep it readable on a phone), e.g. '21-15-9', 'Thrusters (43/30 kg · 95/65 lb)', 'Pull-ups'"],
   "scaling": ["1-3 short lines with scaled options"],
   "stimulus": "One or two sentences of coach notes on intended stimulus and pacing",
+  "strategy": ["2-3 short pacing or strategy tips, max about 70 characters each, e.g. 'Break thrusters early: 11-10, 8-7, 9.'"],
+  "levels": [
+    {{"name": "Rx", "text": "As written, or a short note on the Rx standard"}},
+    {{"name": "Intermediate", "text": "Concrete loads and substitutions, max about 80 characters"}},
+    {{"name": "Beginner", "text": "Concrete loads and substitutions, max about 80 characters"}}
+  ],
   "focus": ["2-4 short tags for balance tracking, e.g. 'legs', 'pull', 'engine', 'olympic lifting'"],
-  "caption": "Instagram caption in English: a hook line, the full workout, the scaled options, the coach note, a call to post scores in the comments, then 3-5 hashtags from the brand description. Max 2000 characters."
+  "caption": "Instagram caption in English: a hook line, the full workout, the scaled options, the coach note, a call to post scores in the comments, and as the last line before the hashtags a call to send the workout to a training partner or tag them, then 3-5 hashtags from the brand description. Max 2000 characters."
 }}"""
 
 FIELDS = {
@@ -41,12 +47,23 @@ def _validate(wod):
             raise ValueError(f'fältet "{key}" saknas eller har fel typ')
     if len(wod["workout"]) > 14:
         raise ValueError("passet har för många rader för bilden (max 12)")
+    strategy = wod.get("strategy")
+    if not isinstance(strategy, list) or not 1 <= len(strategy) <= 3 \
+            or not all(isinstance(t, str) and t.strip() for t in strategy):
+        raise ValueError('fältet "strategy" ska vara en lista med 1–3 korta tips')
+    levels = wod.get("levels")
+    if not isinstance(levels, list) or len(levels) != 3 or not all(
+            isinstance(lv, dict) and str(lv.get("name") or "").strip() and str(lv.get("text") or "").strip()
+            for lv in levels):
+        raise ValueError('fältet "levels" ska vara en lista med exakt 3 nivåer som har "name" och "text"')
     if len(wod["caption"]) > 2200:
         raise ValueError("bildtexten är längre än Instagrams gräns på 2 200 tecken")
     if "crossfit" in json.dumps(wod, ensure_ascii=False).lower():
         raise ValueError('ordet "CrossFit" får inte förekomma')
     wod["workout"] = [str(x).strip() for x in wod["workout"] if str(x).strip()]
     wod["scaling"] = [str(x).strip() for x in wod["scaling"] if str(x).strip()][:3]
+    wod["strategy"] = [t.strip() for t in strategy]
+    wod["levels"] = [{"name": str(lv["name"]).strip(), "text": str(lv["text"]).strip()} for lv in levels]
     wod["title"] = wod["title"].strip()[:40]
     return wod
 
@@ -103,3 +120,14 @@ def generate_wod(llm, cfg, history, day, feedback=None, previous=None, attempts=
 def alt_text(wod):
     text = f"Workout of the day: {wod['title']}. {wod['format']}. " + "; ".join(wod["workout"])
     return text[:1000]
+
+
+def carousel_alt_texts(wod):
+    """Alt-text för karusellens tre bilder: passet, planen och uppmaningen att dela."""
+    plan = f"The plan: {wod['stimulus']} "
+    if wod.get("strategy"):
+        plan += "Pacing: " + " ".join(wod["strategy"]) + " "
+    if wod.get("levels"):
+        plan += "Levels: " + "; ".join(f"{lv['name']}: {lv['text']}" for lv in wod["levels"])
+    share = "Share today's workout with a training partner and post your time in the comments."
+    return [alt_text(wod), plan.strip()[:1000], share]

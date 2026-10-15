@@ -26,6 +26,7 @@ class Config:
     image_base_url: str | None
     ig_handle: str | None
     timezone: str
+    wod_format: str
 
 
 def load_config() -> Config:
@@ -33,6 +34,9 @@ def load_config() -> Config:
     missing = [k for k in ("ANTHROPIC_API_KEY", "IG_ACCESS_TOKEN") if not os.getenv(k)]
     if missing:
         sys.exit(f"Saknar {', '.join(missing)} i .env. Se README, steg 4.")
+    wod_format = (os.getenv("WOD_FORMAT") or "karusell").strip().lower()
+    if wod_format not in ("karusell", "bild"):
+        sys.exit(f'WOD_FORMAT måste vara "karusell" eller "bild", inte "{wod_format}".')
     return Config(
         anthropic_api_key=os.environ["ANTHROPIC_API_KEY"],
         ig_access_token=os.environ["IG_ACCESS_TOKEN"],
@@ -48,4 +52,5 @@ def load_config() -> Config:
         image_base_url=os.getenv("BILD_BAS_URL") or None,
         ig_handle=os.getenv("IG_HANDLE") or None,
         timezone=os.getenv("TIDSZON") or "Europe/Stockholm",
+        wod_format=wod_format,
     )

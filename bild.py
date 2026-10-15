@@ -96,7 +96,18 @@ def _fit_title(draw, title, width):
     return [" ".join(w for w, _ in line) for line in lines[:2]], font
 
 
-def render_wod_image(wod, day, handle, path):
+def draw_swipe(draw, text, font, color, y):
+    """Högerställd text följd av en ritad pil (typsnittet saknar tecknet →)."""
+    arrow_w, gap = 34, 14
+    x_end = W - MARGIN
+    mid = y - font.size * 0.36
+    draw.line([(x_end - arrow_w, mid), (x_end, mid)], fill=color, width=4)
+    draw.line([(x_end - 13, mid - 11), (x_end, mid), (x_end - 13, mid + 11)], fill=color, width=4, joint="curve")
+    draw.text((x_end - arrow_w - gap, y), text, font=font, fill=color, anchor="rs")
+
+
+def render_wod_image(wod, day, handle, path, carousel=False):
+    """Bild 1. Med carousel=True flyttas skalningen till bild 2 och sidfoten säger "swipe"."""
     img = Image.new("RGB", (W, H), BG)
     draw = ImageDraw.Draw(img)
     inner = W - 2 * MARGIN
@@ -128,7 +139,7 @@ def render_wod_image(wod, day, handle, path):
     small = _font("Barlow-Medium.ttf", 28)
     small_bold = _font("Barlow-Bold.ttf", 24)
     scale_lines = []
-    for s in wod.get("scaling", [])[:3]:
+    for s in ([] if carousel else wod.get("scaling", [])[:3]):
         scale_lines += _wrap_words(draw, [(w, MUTED) for w in s.split()], small, inner - 48)
     scale_lines = scale_lines[:5]
     footer_h = 60
@@ -137,7 +148,7 @@ def render_wod_image(wod, day, handle, path):
 
     # Passet: största teckenstorlek där allt får plats, helst utan radbrytningar
     fitting = []
-    for size in range(60, 25, -2):
+    for size in range(72 if carousel else 60, 25, -2):
         layout, block_h = _layout_block(draw, wod["workout"], size, inner)
         if y + block_h <= bottom:
             fitting.append(layout)
@@ -166,7 +177,10 @@ def render_wod_image(wod, day, handle, path):
     fy = H - MARGIN + 4
     if handle:
         draw.text((MARGIN, fy), f"@{handle}", font=foot, fill=MUTED, anchor="ls")
-    draw.text((W - MARGIN, fy), "POST YOUR SCORE BELOW", font=foot, fill=MUTED, anchor="rs")
+    if carousel:
+        draw_swipe(draw, "SWIPE FOR THE PLAN", foot, ACCENT, fy)
+    else:
+        draw.text((W - MARGIN, fy), "POST YOUR SCORE BELOW", font=foot, fill=MUTED, anchor="rs")
 
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)

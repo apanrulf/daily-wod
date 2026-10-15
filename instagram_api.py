@@ -1,7 +1,7 @@
 """Liten klient för Instagram API med Instagram Login (graph.instagram.com).
 
 Bara de anrop agenten behöver: kontoinfo, publiceringsgräns, inlägg,
-kommentarer, svar, dölja kommentarer, publicera bild och förnya token.
+kommentarer, svar, dölja kommentarer, publicera bild eller karusell och förnya token.
 I torrkörningsläge (dry_run) görs alla läsningar på riktigt men inga
 skrivningar skickas till Instagram.
 """
@@ -127,6 +127,47 @@ class InstagramClient:
         self._wait_until_ready(container_id)
         media_id = self._request(
             "POST", f"{self.user_id}/media_publish", body={"creation_id": container_id}
+        )["id"]
+        try:
+            permalink = self._request("GET", str(media_id), {"fields": "permalink"}).get("permalink")
+        except InstagramError:
+            permalink = None
+        return {"id": media_id, "permalink": permalink}
+
+    def publish_carousel(self, image_urls, caption, alt_texts=None):
+        """Publicerar 2-10 bilder som en karusell: en container per bild, en karusellcontainer, publicera.
+
+        Räknas som ett inlägg i dygnsgränsen.
+        """
+        if not 2 <= len(image_urls) <= 10:
+            raise InstagramError(f"En karusell måste ha 2-10 bilder, inte {len(image_urls)}.")
+        if self.dry_run:
+            return {"id": "torrkorning", "permalink": None}
+        alt_texts = list(alt_texts or [])
+        children = []
+        for i, url in enumerate(image_urls):
+            body = {"image_url": url, "is_carousel_item": True}
+            alt = alt_texts[i] if i < len(alt_texts) else None
+            if alt:
+                body["alt_text"] = alt
+            try:
+                container_id = self._request("POST", f"{self.user_id}/media", body=body)["id"]
+            except InstagramError as exc:
+                # alt_text är dokumenterat för bildcontainrar, men om Instagram skulle avvisa det
+                # på karusellbilder vill vi hellre publicera utan alt-text än inte alls.
+                if "alt_text" not in body or "alt_text" not in str(exc):
+                    raise
+                body.pop("alt_text")
+                container_id = self._request("POST", f"{self.user_id}/media", body=body)["id"]
+            self._wait_until_ready(container_id)
+            children.append(str(container_id))
+
+        carousel_id = self._request("POST", f"{self.user_id}/media", body={
+            "media_type": "CAROUSEL", "children": ",".join(children), "caption": caption,
+        })["id"]
+        self._wait_until_ready(carousel_id)
+        media_id = self._request(
+            "POST", f"{self.user_id}/media_publish", body={"creation_id": carousel_id}
         )["id"]
         try:
             permalink = self._request("GET", str(media_id), {"fields": "permalink"}).get("permalink")

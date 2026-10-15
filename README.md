@@ -2,12 +2,17 @@
 
 En AI-agent som driver ett Instagramkonto med ett nytt träningspass (WOD) varje dag. Claude är coachen och allt körs gratis i GitHub Actions.
 
-<img src="exempel.jpg" width="360" alt="Exempel på en WOD-bild">
+<img src="exempel.jpg" width="360" alt="Exempel på den första bilden i en WOD-karusell">
 
 **Vad den gör varje morgon**
-1. **Skriver dagens pass.** Coachen följer veckoschemat i `varumarke.md` och tittar på de senaste tre veckornas pass, så att rörelser, tidsdomäner och muskelgrupper varierar. Varje pass har vikter i kg och lb och skalningsalternativ.
-2. **Gör en bild.** Passet ritas upp som en bild i formatet 1080 × 1350.
-3. **Publicerar på Instagram.** Inlägget får en bildtext med passet, coachens kommentar och hashtags, och uppmanar folk att lägga sina resultat i kommentarerna.
+1. **Skriver dagens pass.** Coachen följer veckoschemat i `varumarke.md` och tittar på de senaste tre veckornas pass, så att rörelser, tidsdomäner och muskelgrupper varierar. Varje pass har vikter i kg och lb, tempotips och tre nivåer: Rx, Intermediate och Beginner.
+2. **Gör en karusell med tre bilder** i formatet 1080 × 1350:
+   1. **Passet.**
+   2. **Planen:** coachens kommentar, tempotips och de tre nivåerna.
+   3. **Dela:** en uppmaning att skicka passet till en träningskompis, tagga någon eller lägga sin tid. Texten växlar från dag till dag.
+3. **Publicerar på Instagram.** Inlägget får en bildtext med passet, coachens kommentar och hashtags. Den uppmanar folk att lägga sina resultat i kommentarerna och att skicka passet till en träningskompis.
+
+Vill du hellre ha en enda bild per dag, se [Karusell eller en bild](#karusell-eller-en-bild).
 
 Alla pass skrivs från grunden av agenten. Den kopierar aldrig andras pass och använder aldrig ordet "CrossFit", som är ett skyddat varumärke.
 
@@ -25,16 +30,37 @@ Alla pass skrivs från grunden av agenten. Den kopierar aldrig andras pass och a
 ## Installation
 
 ### 1. Skapa Instagramkontot
-Skapa kontot och byt till ett professionellt konto (Business eller Creator) under kontoinställningarna i appen.
+Skapa kontot och byt till ett professionellt konto (Business eller Creator) under kontoinställningarna i appen. Kontot måste vara publikt, annars går det inte att hämta en token.
 
 ### 2. Skapa en Meta-app och hämta en token
-1. Gå till [developers.facebook.com/apps](https://developers.facebook.com/apps) och klicka **Skapa app**. Välj typen **Business**.
-2. Lägg till produkten **Instagram** och öppna **API setup with Instagram business login**.
-3. Lägg till ditt Instagramkonto på sidan och följ instruktionerna där.
-4. Se till att appen har behörigheterna `instagram_business_basic`, `instagram_business_content_publish` och `instagram_business_manage_comments`.
-5. Klicka **Generate token**, logga in och kopiera token. Den gäller i 60 dagar och förnyas automatiskt i steg 8.
+Du behöver ingen Facebook-sida, ingen företagsverifiering och ingen App Review. Appen kan ligga kvar i utvecklingsläge eftersom den bara används för ditt eget konto. Menyerna kan visas på svenska; här står de engelska namnen.
 
-Du behöver ingen App Review så länge appen bara används för konton du själv äger och har lagt till i appen.
+**Skapa appen**
+1. Gå till [developers.facebook.com/apps](https://developers.facebook.com/apps) och logga in med Facebook. Första gången klickar du **Get Started** och registrerar dig som utvecklare.
+2. Klicka **Create App**.
+3. **App details:** skriv ett namn, till exempel *Daily WOD Agent*, och din e-post. Klicka **Next**.
+4. **Use cases:** välj **Manage messaging & content on Instagram** under kategorin *Content management*. Klicka **Next**.
+5. **Business:** välj **I don't want to connect a business portfolio yet**. Klicka **Next**.
+6. **Requirements:** klicka **Next**.
+7. **Overview:** klicka **Go to dashboard** och ange ditt Facebook-lösenord om du blir tillfrågad.
+
+**Behörigheter**
+
+8. På Dashboard klickar du **Customize** vid *Manage messaging & content on Instagram*. Du hamnar på **API setup with Instagram business login**.
+9. Klicka **Add all required permissions** om knappen finns. Kontrollera under **Permissions and features** att `instagram_business_basic`, `instagram_business_content_publish` och `instagram_business_manage_comments` finns med.
+
+**Gör kontot till testare**
+
+10. Gå till **App roles → Roles** i vänstermenyn och klicka **Add People**.
+11. Välj **Instagram Tester**, skriv kontots användarnamn utan @ och klicka **Add**. Det står *Pending* tills du har accepterat.
+12. Logga in på WOD-kontot och öppna [instagram.com/accounts/manage_access](https://www.instagram.com/accounts/manage_access/). Välj fliken **Tester invites** och klicka **Accept**. I mobilappen: Profil → ☰ → **Website permissions** → **Apps and websites** → **Tester invites**.
+
+**Hämta token**
+
+13. Gå tillbaka till **API setup with Instagram business login**. Under **1. Generate access tokens** klickar du **Add account** och loggar in med WOD-kontot.
+14. Klicka **Generate token** vid kontot, kryssa i **I understand** och kopiera token. Den visas bara en gång. Den gäller i 60 dagar och förnyas automatiskt i steg 8.
+
+Resten av sidan (webhooks, business login, App Review) behöver du inte göra något med.
 
 ### 3. Skaffa en Claude API-nyckel
 Logga in på [platform.claude.com](https://platform.claude.com), lägg till betalning och skapa en nyckel under **API keys**. Ett WOD om dagen kostar bara några få anrop.
@@ -68,6 +94,13 @@ Token från Meta slutar fungera efter 60 dagar. Flödet *Förnya Instagram-token
 
 ---
 
+## Karusell eller en bild
+Som standard publiceras en karusell med tre bilder. Vill du ha det gamla läget med en enda bild, där skalningen står längst ned på bilden, lägger du till inställningen `WOD_FORMAT` med värdet `bild`:
+- **I GitHub:** **Settings → Secrets and variables → Actions → Variables → New repository variable**. Namn `WOD_FORMAT`, värde `bild`. Flödet läser variabeln automatiskt.
+- **På datorn:** sätt `WOD_FORMAT=bild` i `.env`.
+
+Med `karusell` eller ingen inställning alls blir det tre bilder. Karusellen räknas som ett inlägg i Instagrams dygnsgräns.
+
 ## Ändra publiceringstiden
 Öppna `.github/workflows/dagens-wod.yml` och ändra raden `cron: "17 5 * * *"`. Tiden anges i UTC, så 05:17 UTC är 07:17 svensk sommartid och 06:17 vintertid. Vid hög belastning hos GitHub kan schemalagda körningar bli några minuter sena.
 
@@ -99,7 +132,7 @@ python main.py status                        # kontrollera kopplingen
 python main.py wod-skapa --torrkorning       # dagens pass och bild, sparas inte
 python main.py wod-skapa                     # som ovan men du kan ge feedback och spara
 ```
-Bilden hamnar i mappen `bilder`. Med `--torrkorning` publiceras ingenting.
+Bilderna hamnar i mappen `bilder`, som `2026-10-15-1.jpg` till `-3.jpg`. Med `--torrkorning` publiceras ingenting.
 
 ### Svara på kommentarer
 Agenten kan också gå igenom kommentarer, svara på frågor och gratulera till bra tider. Den flaggar sådant som du själv behöver ta i `flaggade.md`.
@@ -122,7 +155,8 @@ Vill du lägga upp egna bilder, till exempel från en träning, lägger du dem i
 | `bilder/` | Bilderna som Instagram hämtar |
 | `main.py` | Kommandona: `status`, `wod-skapa`, `wod-publicera`, `kommentarer`, `posta`, `fornya-token` |
 | `wod.py` | Coachen som skriver passen |
-| `bild.py` | Ritar bilderna |
+| `bild.py` | Ritar bild 1, passet (och den enda bilden i läget `bild`) |
+| `karusell.py` | Ritar bild 2, planen, och bild 3, uppmaningen att dela, och sätter ihop karusellen |
 | `agent.py` | Bildtexter för egna bilder och kommentarsagenten |
 | `instagram_api.py` | Anropen till Instagrams API |
 | `.github/workflows/` | De schemalagda flödena i GitHub Actions |

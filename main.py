@@ -14,7 +14,8 @@ from agent import Approver, CommentAgent, write_caption
 from bild import render_wod_image
 from config import ENV_PATH, load_config
 from instagram_api import InstagramClient, InstagramError
-from wod import alt_text, generate_wod
+from karusell import render_carousel
+from wod import alt_text, carousel_alt_texts, generate_wod
 
 
 # ---------- hjälpare ----------
@@ -54,6 +55,13 @@ def url_is_live(url, attempts=24, delay=5):
         if i < attempts - 1:
             time.sleep(delay)
     return False
+
+
+def image_paths(entry):
+    """Relativa bildsökvägar för ett WOD. Äldre poster har en sträng i "bild", nyare en lista i "bilder"."""
+    if entry.get("bilder"):
+        return list(entry["bilder"])
+    return [entry["bild"]] if entry.get("bild") else []
 
 
 def require_terminal(args):
@@ -217,16 +225,22 @@ def cmd_wod_create(cfg, ig, llm, args):
 
     past = [w for w in history if w.get("datum") != day.isoformat()]
     handle = cfg.ig_handle or ig.username
-    image_rel = f"{cfg.images_dir.name}/{day.isoformat()}.jpg"
-    image_path = cfg.images_dir / f"{day.isoformat()}.jpg"
+
+    def render(wod):
+        if cfg.wod_format == "bild":
+            paths = [render_wod_image(wod, day, handle, cfg.images_dir / f"{day.isoformat()}.jpg")]
+        else:
+            paths = render_carousel(wod, day, handle, cfg.images_dir, day.isoformat())
+        return [f"{cfg.images_dir.name}/{p.name}" for p in paths]
 
     print(f"Coachen programmerar dagens WOD ({day.strftime('%A %Y-%m-%d')}) ...")
     wod = generate_wod(llm, cfg, past, day)
     while True:
-        render_wod_image(wod, day, handle, image_path)
+        images = render(wod)
         print(f"\n{'=' * 60}\n{wod['title']} · {wod['format']}\n")
         print("\n".join(wod["workout"]))
-        print(f"\nBild: {image_rel}\n\nBildtext:\n{wod['caption']}\n{'=' * 60}")
+        label = "Bild" if len(images) == 1 else "Bilder"
+        print(f"\n{label}: {', '.join(images)}\n\nBildtext:\n{wod['caption']}\n{'=' * 60}")
         if args.auto:
             break
         choice = input("[j] spara  [f] ge feedback  [n] avbryt: ").strip().lower()
@@ -242,13 +256,13 @@ def cmd_wod_create(cfg, ig, llm, args):
                 wod = generate_wod(llm, cfg, past, day, feedback=feedback, previous=wod)
 
     if ig.dry_run:
-        print(f"[torrkörning] Bilden ligger i {image_rel}. Inget sparas i {cfg.wod_path.name}.")
+        print(f"[torrkörning] {label}: {', '.join(images)}. Inget sparas i {cfg.wod_path.name}.")
         return
     entry = {"datum": day.isoformat(), "veckodag": day.strftime("%A"), **wod,
-             "bild": image_rel, "status": "redo"}
+             "bilder": images, "status": "redo"}
     history = sorted([entry] + past, key=lambda w: w.get("datum", ""), reverse=True)
     save_json(cfg.wod_path, history)
-    print(f"✓ Sparat. Bilden ligger i {image_rel} och väntar på publicering.")
+    print(f"✓ Sparat. {', '.join(images)} väntar på publicering.")
 
 
 def cmd_wod_publish(cfg, ig, llm, args):
@@ -264,12 +278,16 @@ def cmd_wod_publish(cfg, ig, llm, args):
         sys.exit("BILD_BAS_URL saknas. Den sätts automatiskt i GitHub Actions, se README.")
     require_terminal(args)
 
-    url = f"{cfg.image_base_url.rstrip('/')}/{entry['bild']}"
-    print(f"Kontrollerar att Instagram kan hämta bilden: {url}")
-    if not url_is_live(url):
-        if not ig.dry_run:
-            sys.exit("Bilden går inte att nå på den publika adressen. Är repot publikt och bilden pushad?")
-        print("[torrkörning] Bilden går inte att nå än, men fortsätter.")
+    images = image_paths(entry)
+    if not images:
+        sys.exit("Dagens WOD saknar bilder. Kör wod-skapa --nytt.")
+    urls = [f"{cfg.image_base_url.rstrip('/')}/{rel}" for rel in images]
+    for url in urls:
+        print(f"Kontrollerar att Instagram kan hämta bilden: {url}")
+        if not url_is_live(url):
+            if not ig.dry_run:
+                sys.exit("Bilden går inte att nå på den publika adressen. Är repot publikt och bilden pushad?")
+            print("[torrkörning] Bilden går inte att nå än, men fortsätter.")
 
     used, total = ig.publishing_limit()
     if used >= total:
@@ -281,7 +299,10 @@ def cmd_wod_publish(cfg, ig, llm, args):
             print("Inte publicerat.")
             return
 
-    result = ig.publish_image(url, entry["caption"], alt_text(entry))
+    if len(urls) > 1:
+        result = ig.publish_carousel(urls, entry["caption"], carousel_alt_texts(entry))
+    else:
+        result = ig.publish_image(urls[0], entry["caption"], alt_text(entry))
     if ig.dry_run:
         print("[torrkörning] Skulle ha publicerat dagens WOD.")
         return
