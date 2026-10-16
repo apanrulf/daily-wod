@@ -44,6 +44,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add wods.json bilder/
           git diff --cached --quiet || git commit -m "WOD $(date -u +%F)"
+          git pull --rebase # Om något annat har pushats under körningen
           git push
 
       - name: Publicera på Instagram
@@ -58,4 +59,5 @@ jobs:
         run: |
           git add wods.json
           git diff --cached --quiet || git commit -m "Publicerat WOD $(date -u +%F)"
+          git pull --rebase # Om något annat har pushats under körningen
           git push
