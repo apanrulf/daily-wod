@@ -4,6 +4,9 @@ on:
   schedule:
     # Tiden anges i UTC. 05:17 UTC = 07:17 svensk sommartid, 06:17 vintertid.
     - cron: "17 5 * * *"
+    # Reserv: GitHub startar ibland inte schemalagda körningar. Om dagens WOD redan är
+    # skapat och publicerat gör den här körningen ingenting.
+    - cron: "47 6 * * *"
   workflow_dispatch: # Gör att du kan köra flödet för hand under fliken Actions.
 
 permissions:

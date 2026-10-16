@@ -102,7 +102,9 @@ Som standard publiceras en karusell med tre bilder. Vill du ha det gamla läget 
 Med `karusell` eller ingen inställning alls blir det tre bilder. Karusellen räknas som ett inlägg i Instagrams dygnsgräns.
 
 ## Ändra publiceringstiden
-Öppna `.github/workflows/dagens-wod.yml` och ändra raden `cron: "17 5 * * *"`. Tiden anges i UTC, så 05:17 UTC är 07:17 svensk sommartid och 06:17 vintertid. Vid hög belastning hos GitHub kan schemalagda körningar bli några minuter sena.
+Öppna `.github/workflows/dagens-wod.yml` och ändra raden `cron: "17 5 * * *"`. Tiden anges i UTC, så 05:17 UTC är 07:17 svensk sommartid och 06:17 vintertid.
+
+GitHub kan starta schemalagda körningar sent eller ibland inte alls. Därför finns en reservkörning, `cron: "47 6 * * *"`, som publicerar om den första inte har gjort det. Har dagens WOD redan publicerats gör reserven ingenting. Flyttar du tiden, flytta reserven också så att den ligger ungefär en och en halv timme efter.
 
 ## Om något går fel
 GitHub mejlar dig när ett schemalagt flöde misslyckas. Öppna körningen under **Actions** för att se felet.
