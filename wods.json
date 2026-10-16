@@ -1,5 +1,57 @@
 [
   {
+    "datum": "2026-10-16",
+    "veckodag": "Friday",
+    "title": "Pull, Row, Press",
+    "format": "For Time · 15 min cap",
+    "workout": [
+      "5 Rounds For Time:",
+      "12/10 cal Row",
+      "8 Strict or kipping pull-ups",
+      "12 Hand-release push-ups",
+      "Time cap: 15 min",
+      "Score = total time (or reps completed at the cap)"
+    ],
+    "scaling": [
+      "Pull-ups: banded or ring rows (feet elevated for a harder option).",
+      "Push-ups: hands on a box or bar, or standard push-ups.",
+      "Row: drop to 10/8 cal, or 4 rounds."
+    ],
+    "stimulus": "A fast, upper-body-driven triplet. Legs stay fresh after yesterday's lifting and box work, so the pace comes from your breathing and grip. Aim for a steady 2–3 min per round with no long stops.",
+    "strategy": [
+      "Row hard but smooth: leave some air for the pull-ups.",
+      "Break pull-ups early: 4-4 or 3-3-2. Don't hang to failure.",
+      "Push-ups in sets of 6. Quick reset, then go again."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 12/10 cal row, 8 pull-ups, 12 hand-release push-ups, 5 rounds."
+      },
+      {
+        "name": "Intermediate",
+        "text": "4 rounds. Banded pull-ups, standard push-ups, row 10/8 cal."
+      },
+      {
+        "name": "Beginner",
+        "text": "3 rounds. Ring rows, push-ups from a box, row 8/6 cal."
+      }
+    ],
+    "focus": [
+      "pull",
+      "push",
+      "engine",
+      "upper body"
+    ],
+    "caption": "Friday means a clean triplet and a clock. Pull, row, press. Go. 🔥\n\n5 Rounds For Time (15 min cap):\n12/10 cal Row\n8 Pull-ups\n12 Hand-release push-ups\n\nScaled options:\n- Pull-ups: banded or ring rows\n- Push-ups: hands elevated on a box or bar\n- Row: 10/8 cal, or cut to 4 rounds\n\nCoach note: This one is fast and upper-body heavy. Your legs get a break after yesterday. Aim for 2–3 min per round and keep the pace steady. Break pull-ups early (4-4 or 3-3-2), keep push-ups in small sets, and row hard but smooth. Injured or unsure? Scale it and talk to a coach or doctor.\n\nPost your time (or your reps at the cap) and your scaling in the comments ⏱️\n\nSend this to your training partner or tag them. Loser buys coffee.\n\n#wod #fortime #functionalfitness #conditioning",
+    "bilder": [
+      "bilder/2026-10-16-1.jpg",
+      "bilder/2026-10-16-2.jpg",
+      "bilder/2026-10-16-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-15",
     "veckodag": "Thursday",
     "title": "Crisp Bar, Fast Feet",
