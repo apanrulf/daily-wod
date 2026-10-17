@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-10-17",
+    "veckodag": "Saturday",
+    "title": "Tag Team Grind",
+    "format": "Partner · 3 Rounds For Time · 32 min cap",
+    "workout": [
+      "Teams of 2 · one works, one rests",
+      "3 Rounds For Time:",
+      "400 m run (each partner runs 200 m)",
+      "50 Double-unders",
+      "40 KB swings (24/16 kg · 53/35 lb)",
+      "30 Alt. DB reverse lunges (22.5/15 kg · 50/35 lb)",
+      "40 Sit-ups",
+      "Split reps any way you like",
+      "Only one partner works at a time",
+      "Time cap: 32 min"
+    ],
+    "scaling": [
+      "Double-unders: 100 single-unders or 50 penguin jumps.",
+      "Swings: lighter bell, 16/12 kg · 35/26 lb. Lunges: bodyweight.",
+      "Not sure about a movement or have an injury? Scale it and talk to a coach or doctor."
+    ],
+    "stimulus": "A steady, sustainable grind, not a sprint. Aim for about 9-10 min per round. Keep each work block short so your partner gets real rest and the pace holds for all 3 rounds.",
+    "strategy": [
+      "Split swings in sets of 10 and lunges in sets of 6-8.",
+      "Swap before you slow down. Quick, clean handoffs win.",
+      "Run the 200s hard but controlled. Save your legs for the lunges."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: double-unders, 24/16 kg swings, 22.5/15 kg DBs."
+      },
+      {
+        "name": "Intermediate",
+        "text": "16/12 kg KB, 15/10 kg DBs, 100 single-unders, 3 rounds."
+      },
+      {
+        "name": "Beginner",
+        "text": "12/8 kg KB, bodyweight lunges, 100 singles, 2 rounds, 250 m row for each 200 m run."
+      }
+    ],
+    "focus": [
+      "legs",
+      "engine",
+      "posterior chain",
+      "core"
+    ],
+    "caption": "Saturday means team day. One works, one rests, and you both earn it. 🔥\n\nTAG TEAM GRIND\n3 Rounds For Time (32 min cap), teams of 2:\n400 m run (each partner runs 200 m)\n50 Double-unders\n40 KB swings (24/16 kg · 53/35 lb)\n30 Alt. DB reverse lunges (22.5/15 kg · 50/35 lb)\n40 Sit-ups\nSplit reps any way you like. Only one partner works at a time.\n\nScaled options:\n- Double-unders: 100 single-unders or 50 penguin jumps\n- Swings: 16/12 kg · 35/26 lb. Lunges: bodyweight\n- Beginner: 2 rounds, 250 m row instead of each 200 m run\nInjured or unsure? Scale it and talk to a coach or doctor.\n\nCoach note: This is a steady grind, not a sprint. Aim for about 9-10 min per round. Keep your sets short, swap before you slow down, and save your legs for the lunges. 💪\n\nPost your team time (or reps at the cap) in the comments!\n\nSend this to your training partner or tag them now.\n\n#wod #fortime #conditioning #functionalfitness",
+    "bilder": [
+      "bilder/2026-10-17-1.jpg",
+      "bilder/2026-10-17-2.jpg",
+      "bilder/2026-10-17-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-16",
     "veckodag": "Friday",
     "title": "Pull, Row, Press",
