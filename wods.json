@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-10-18",
+    "veckodag": "Sunday",
+    "title": "Sunday Reset Flow",
+    "format": "Active Recovery · 40 min easy",
+    "workout": [
+      "A. 20 min easy aerobic, Zone 1-2",
+      "Choose bike, row or easy jog",
+      "Nose breathing, full sentences",
+      "B. 2 Rounds, no rush:",
+      "10 Cat-cow",
+      "8/side Thoracic rotations",
+      "10 Air squats, slow tempo",
+      "30 sec/side Couch stretch",
+      "C. 2 Rounds:",
+      "1 min Dead hang or easy scap pull",
+      "1 min Pigeon pose per side",
+      "2 min Easy breathing, lie on back"
+    ],
+    "scaling": [
+      "Short on time? Do A for 12 min and one round of B and C.",
+      "Swap the run for a walk if legs are heavy from Saturday.",
+      "Skip any position that causes pain and ask a coach or doctor."
+    ],
+    "stimulus": "No intensity today. Heart rate stays low, movement stays smooth, and you finish feeling better than you started. Keep it conversational the whole way.",
+    "strategy": [
+      "If you can't talk in full sentences, slow down.",
+      "Move through ranges slowly, no forcing end positions.",
+      "Spend extra time on the tightest spots, not the easy ones."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 20 min Zone 1-2, then 2 rounds of B and C."
+      },
+      {
+        "name": "Intermediate",
+        "text": "15 min easy bike or row, then 2 rounds of B, 1 round of C."
+      },
+      {
+        "name": "Beginner",
+        "text": "10-15 min easy walk or bike, 1 round of B and C. Hold stretches lightly."
+      }
+    ],
+    "focus": [
+      "recovery",
+      "mobility",
+      "aerobic base"
+    ],
+    "caption": "Recovery is part of the program. Today we move easy and reset. 💪\n\nSUNDAY RESET FLOW\nActive recovery · 40 min easy\n\nA. 20 min easy aerobic, Zone 1-2\nBike, row or easy jog. Nose breathing, full sentences.\n\nB. 2 Rounds, no rush:\n10 Cat-cow\n8/side Thoracic rotations\n10 Air squats, slow tempo\n30 sec/side Couch stretch\n\nC. 2 Rounds:\n1 min Dead hang or easy scap pull\n1 min Pigeon pose per side\n2 min Easy breathing, lie on back\n\nScaled options:\n- Short on time? Do A for 12 min and one round of B and C.\n- Swap the run for a walk if legs are heavy.\n- Skip any position that causes pain. If you're injured or unsure, scale it and talk to a coach or doctor.\n\nCoach note: No intensity today. Keep your heart rate low and your movement smooth. Finish feeling better than you started.\n\nDid you do it? Drop your session in the comments: minutes moved and how you feel. ⏱️\n\nSend this to a training partner who needs a recovery day too.\n\n#wod #workoutoftheday #functionalfitness #conditioning",
+    "bilder": [
+      "bilder/2026-10-18-1.jpg",
+      "bilder/2026-10-18-2.jpg",
+      "bilder/2026-10-18-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-17",
     "veckodag": "Saturday",
     "title": "Tag Team Grind",
