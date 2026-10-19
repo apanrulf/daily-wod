@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-10-19",
+    "veckodag": "Monday",
+    "title": "Heavy Five, Quick Eight",
+    "format": "Strength + AMRAP 8",
+    "workout": [
+      "A. Back squat · 20 min",
+      "Build to a heavy set of 5 (RPE 8-9)",
+      "Then 1 set of 8 at ~80% of your heavy 5",
+      "Rest 2-3 min between work sets",
+      "Rest 3 min, then:",
+      "B. AMRAP 8 min",
+      "10/8 cal Assault/Echo bike",
+      "8 Toes-to-bar",
+      "8 Burpees",
+      "Score A = heavy 5 load",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "Toes-to-bar: hanging knee raises or knees-to-chest",
+      "Squat: keep 1-2 reps in reserve, use a box or pause for depth",
+      "Burpees: step back instead of jumping, no push-up"
+    ],
+    "stimulus": "Part A is a smooth, honest build to a heavy but clean set of 5. No grinding, no form breaks. Part B is a short burner: ride hard, break T2B early, keep burpees steady.",
+    "strategy": [
+      "Squat: add weight in steady jumps, save your best for the top.",
+      "Bike at 80%, not 100%. You need your grip for T2B.",
+      "Break T2B early: 4-4 or 3-3-2. Never fail reps."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "Heavy 5 at RPE 8-9, then 8 reps at ~80%. T2B and jumping burpees as written."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Heavy 5 at a load you own. Alternate T2B with hanging knee raises."
+      },
+      {
+        "name": "Beginner",
+        "text": "Goblet or empty-bar squat 3x8 to a box. Knee raises, step-back burpees, bike 8/6 cal."
+      }
+    ],
+    "focus": [
+      "legs",
+      "squat",
+      "core",
+      "engine"
+    ],
+    "caption": "Monday means heavy. Build it, then burn it. 🔥\n\nHEAVY FIVE, QUICK EIGHT\n\nA. Back squat · 20 min\n- Build to a heavy set of 5 (RPE 8-9)\n- Then 1 set of 8 at ~80% of your heavy 5\n- Rest 2-3 min between work sets\n\nRest 3 min, then:\n\nB. AMRAP 8 min\n- 10/8 cal Assault/Echo bike\n- 8 Toes-to-bar\n- 8 Burpees\n\nScaling:\n- Toes-to-bar: hanging knee raises or knees-to-chest\n- Squat: keep 1-2 reps in reserve, use a box or pause for depth\n- Burpees: step back instead of jumping, no push-up\n\nCoach note: Part A is a smooth, honest build to a heavy but clean set of 5. No grinding, no form breaks. Part B is a short burner: bike at 80%, break T2B early, keep burpees steady. 💪\n\nNew to heavy squats, or dealing with an injury? Scale it and talk to a coach or doctor.\n\nPost your heavy 5 and your AMRAP score (rounds + reps) in the comments.\n\nSend this to your training partner or tag them in the comments.\n\n#wod #workoutoftheday #strengthtraining #metcon #functionalfitness",
+    "bilder": [
+      "bilder/2026-10-19-1.jpg",
+      "bilder/2026-10-19-2.jpg",
+      "bilder/2026-10-19-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-18",
     "veckodag": "Sunday",
     "title": "Sunday Reset Flow",
