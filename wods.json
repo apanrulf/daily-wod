@@ -1,5 +1,58 @@
 [
   {
+    "datum": "2026-10-20",
+    "veckodag": "Tuesday",
+    "title": "Steady Engine Builder",
+    "format": "AMRAP 24",
+    "workout": [
+      "AMRAP 24 min:",
+      "200 m Run",
+      "12/10 cal Row",
+      "10 DB push press (20/12.5 kg · 45/30 lb)",
+      "40 Single-unders (or 20 Double-unders)",
+      "Pace: steady and sustainable",
+      "Hold the same pace for all 24 min",
+      "Score = rounds + reps"
+    ],
+    "scaling": [
+      "Swap the run for a 15/12 cal Echo bike and use lighter DBs (12.5/7.5 kg · 30/15 lb).",
+      "Use 30 single-unders or 60 sec of jump-rope pace work. Shorten the run to 150 m if legs are fried."
+    ],
+    "stimulus": "This is an aerobic engine builder. You should be able to move the whole 24 minutes without stopping for long. Keep the run and row at about 75% effort and take short, planned breaks on the push press.",
+    "strategy": [
+      "Run easy. Legs are likely still tired from yesterday's squats.",
+      "Row smooth and long. Don't sprint the calories.",
+      "Break the push press early: 5-5 or 4-3-3. Don't fail reps."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 200 m run, 12/10 cal row, 20/12.5 kg DBs, 40 single-unders."
+      },
+      {
+        "name": "Intermediate",
+        "text": "150 m run, 10/8 cal row, DBs 15/10 kg (35/20 lb), 40 single-unders."
+      },
+      {
+        "name": "Beginner",
+        "text": "100 m run or 10/8 cal bike, 8 push press at 10/7.5 kg (25/15 lb), 30 single-unders."
+      }
+    ],
+    "focus": [
+      "engine",
+      "monostructural",
+      "shoulders",
+      "aerobic base"
+    ],
+    "caption": "Tuesday is engine day. Settle in, find a rhythm, and hold it for 24 minutes. 💪\n\nAMRAP 24 min:\n200 m Run\n12/10 cal Row\n10 DB push press (20/12.5 kg · 45/30 lb)\n40 Single-unders (or 20 Double-unders)\n\nScore = rounds + reps.\n\nScaled options:\n- Swap the run for a 15/12 cal Echo bike and use lighter DBs (12.5/7.5 kg · 30/15 lb).\n- Use 30 single-unders and shorten the run to 150 m if your legs are tired.\n\nCoach note: This is an aerobic piece. Run and row at about 75% effort, and break the push press early so you never grind. Same pace in minute 24 as in minute 4.\n\nIf you have an injury or aren't sure about a movement, scale it and talk to a coach or doctor.\n\nPost your rounds + reps in the comments. ⏱️\n\nSend this to a training partner or tag them and go do it together.\n\n#wod #workoutoftheday #functionalfitness #conditioning #amrap",
+    "bilder": [
+      "bilder/2026-10-20-1.jpg",
+      "bilder/2026-10-20-2.jpg",
+      "bilder/2026-10-20-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-19",
     "veckodag": "Monday",
     "title": "Heavy Five, Quick Eight",
