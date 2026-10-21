@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-10-21",
+    "veckodag": "Wednesday",
+    "title": "Handstands and Hustle",
+    "format": "Skill EMOM 10 + AMRAP 12",
+    "workout": [
+      "A. Skill · EMOM 10 min",
+      "Odd: 20-30 sec wall-facing handstand hold",
+      "Even: 10 Hollow rocks",
+      "Rest 3 min, then:",
+      "B. AMRAP 12 min",
+      "10 Ring rows (feet elevated)",
+      "12 KB swings (24/16 kg · 53/35 lb)",
+      "12 Alt. DB step-ups (22.5/15 kg · 50/35 lb)",
+      "Box height 50/40 cm · 20/16 in",
+      "Score A = best hold time",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "Handstand: pike hold with feet on a box, or a wall plank hold.",
+      "Ring rows: walk feet back to make them easier. Keep feet low for less load.",
+      "Lighten the KB and DBs, and lower the box. Stay smooth."
+    ],
+    "stimulus": "Part A is quality over quantity. Stay fresh, stack the line, and stop a hold before form breaks. Part B is a steady, moderate piece. Keep moving and aim for even rounds.",
+    "strategy": [
+      "Part A: stop each hold while the position is still clean.",
+      "Break ring rows early, 5-5, before your grip fades.",
+      "Aim for the same round time every round."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Holds of 30 sec, ring rows with feet elevated, loads as listed."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Hold 20 sec (wall or chest-to-wall). Rows feet on floor. KB 16/12 kg, DB 15/10 kg."
+      },
+      {
+        "name": "Beginner",
+        "text": "Pike hold on box 20 sec. Rows standing at an incline. KB 12/8 kg, DB 10/7.5 kg, low box."
+      }
+    ],
+    "focus": [
+      "gymnastics",
+      "shoulders",
+      "pull",
+      "posterior chain"
+    ],
+    "caption": "Skill first, then sweat. Midweek is for getting upside down. 🔥\n\nA. Skill · EMOM 10 min\nOdd: 20-30 sec wall-facing handstand hold\nEven: 10 Hollow rocks\n\nRest 3 min, then:\n\nB. AMRAP 12 min\n10 Ring rows (feet elevated)\n12 KB swings (24/16 kg · 53/35 lb)\n12 Alt. DB step-ups (22.5/15 kg · 50/35 lb), box 50/40 cm · 20/16 in\n\nScore A = best hold time. Score B = rounds + reps.\n\nScaled options:\n- Handstand: pike hold with feet on a box, or a wall plank hold.\n- Ring rows: walk your feet back to make them easier, or keep them low for less load.\n- Lighten the KB and DBs and use a lower box.\n\nCoach note: Part A is quality over quantity. Stop each hold before form breaks. Part B is a steady, moderate piece. Pick a pace you can hold for all 12 minutes and keep the rounds even.\n\nIf you have an injury or you're unsure about a movement, scale it and check with a coach or doctor.\n\nPost your hold times and AMRAP scores in the comments. 💪\n\nSend this to your training partner or tag them in.\n\n#wod #workoutoftheday #functionalfitness #amrap",
+    "bilder": [
+      "bilder/2026-10-21-1.jpg",
+      "bilder/2026-10-21-2.jpg",
+      "bilder/2026-10-21-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-20",
     "veckodag": "Tuesday",
     "title": "Steady Engine Builder",
