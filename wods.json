@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-10-22",
+    "veckodag": "Thursday",
+    "title": "Snatch Craft, Sharp Finish",
+    "format": "EMOM 12 (every 90 sec) + For Time · 9 min cap",
+    "workout": [
+      "A. Every 90 sec x 8 sets (12 min)",
+      "1 Snatch pull + 1 Hang power snatch + 1 Overhead squat",
+      "Build to a heavy but crisp complex",
+      "Start ~35/25 kg · 75/55 lb",
+      "Rest 3 min, then:",
+      "B. 3 Rounds For Time (9 min cap)",
+      "200 m Run",
+      "12 Wall balls (9/6 kg · 20/14 lb)",
+      "8 Pull-ups",
+      "Score A = top complex load",
+      "Score B = total time"
+    ],
+    "scaling": [
+      "Complex: drop the overhead squat, or use a PVC pipe or empty bar for technique.",
+      "Wall balls: lighter ball or lower target. Pull-ups: ring rows or banded pull-ups.",
+      "Run: swap for 250 m row or 12/9 cal bike if needed."
+    ],
+    "stimulus": "Part A is about bar path and speed under the bar, not grinding. Part B is short and sharp: move fast, but keep your breathing under control on the run.",
+    "strategy": [
+      "Add load only when every rep is fast and the bar stays close.",
+      "Run at 85%, so you can attack the wall balls right away.",
+      "Split wall balls 6-6 and pull-ups 4-4 or 5-3. Rest briefly."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Heavy but crisp complex, full snatch pull, hang power snatch and overhead squat."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Complex at 30/20 kg · 65/45 lb. Wall balls 6/4 kg · 14/9 lb. Banded pull-ups."
+      },
+      {
+        "name": "Beginner",
+        "text": "PVC or empty bar, drop the overhead squat. 150 m run, 10 wall balls, 8 ring rows."
+      }
+    ],
+    "focus": [
+      "olympic lifting",
+      "snatch",
+      "legs",
+      "engine"
+    ],
+    "caption": "Thursday is for the bar. Make it fast, make it clean. 💪\n\nA. Every 90 sec x 8 sets (12 min)\n1 Snatch pull + 1 Hang power snatch + 1 Overhead squat\nBuild to a heavy but crisp complex. Start ~35/25 kg · 75/55 lb.\n\nRest 3 min, then:\n\nB. 3 Rounds For Time (9 min cap)\n200 m Run\n12 Wall balls (9/6 kg · 20/14 lb)\n8 Pull-ups\n\nScaling:\n- Complex: drop the overhead squat, or use a PVC pipe or empty bar.\n- Wall balls: lighter ball or lower target. Pull-ups: ring rows or banded pull-ups.\n- Run: 250 m row or 12/9 cal bike.\n\nCoach note: Part A is about bar path and speed, not grinding. Add load only when every rep is crisp. Part B is short and sharp. Run at 85%, split the wall balls and pull-ups early, and keep moving.\n\nInjured or unsure? Scale it and talk to a coach or doctor.\n\nPost your top complex load and your time in the comments. ⏱️\n\nSend this to your training partner or tag them in the comments.\n\n#wod #workoutoftheday #functionalfitness #conditioning #strengthtraining",
+    "bilder": [
+      "bilder/2026-10-22-1.jpg",
+      "bilder/2026-10-22-2.jpg",
+      "bilder/2026-10-22-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-21",
     "veckodag": "Wednesday",
     "title": "Handstands and Hustle",
