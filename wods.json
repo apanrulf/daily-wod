@@ -1,5 +1,57 @@
 [
   {
+    "datum": "2026-10-23",
+    "veckodag": "Friday",
+    "title": "Bike, Hinge, Dip",
+    "format": "For Time · 14 min cap",
+    "workout": [
+      "4 Rounds For Time:",
+      "14/10 cal Assault/Echo bike",
+      "10 Deadlifts (70/50 kg · 155/110 lb)",
+      "8 Ring dips",
+      "Time cap: 14 min",
+      "Score = total time (or reps completed at the cap)"
+    ],
+    "scaling": [
+      "Dips: box-assisted ring dips, bench dips or 10 push-ups",
+      "Deadlift: drop to 50/35 kg · 110/75 lb and keep every rep crisp",
+      "Bike: 10/8 cal, or choose a pace you can hold for all 4 rounds"
+    ],
+    "stimulus": "A steady-burn triplet. Aim for about 3 min per round, with the bike hard but controlled. Keep the deadlifts light enough to go unbroken or in two sets, and save your shoulders for the dips.",
+    "strategy": [
+      "Ride at 80%. Don't empty the tank in round 1.",
+      "Deadlifts: touch-and-go, flat back, no rushing the setup.",
+      "Break dips early: 4-4 or 3-3-2 beats a failed set."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 70/50 kg deadlifts and full ring dips."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Deadlift 60/40 kg · 135/90 lb, banded or box-assisted ring dips."
+      },
+      {
+        "name": "Beginner",
+        "text": "Deadlift 40/30 kg · 90/65 lb, 10/8 cal bike, 8 bench dips or push-ups."
+      }
+    ],
+    "focus": [
+      "engine",
+      "posterior chain",
+      "push",
+      "gymnastics"
+    ],
+    "caption": "Friday is for finishing the week strong. 🔥\n\nBike, Hinge, Dip\nFor Time · 14 min cap\n\n4 Rounds For Time:\n14/10 cal Assault/Echo bike\n10 Deadlifts (70/50 kg · 155/110 lb)\n8 Ring dips\n\nTime cap: 14 min\nScore = total time (or reps completed at the cap)\n\nScaled options:\n- Dips: box-assisted ring dips, bench dips or 10 push-ups\n- Deadlift: 50/35 kg · 110/75 lb, crisp reps\n- Bike: 10/8 cal at a pace you can hold for all 4 rounds\n\nCoach note: This is a steady-burn triplet. Aim for about 3 min per round. Ride hard but controlled, keep the deadlifts unbroken or in two sets, and break the dips early so you never fail a set.\n\nIf you're injured or unsure about any movement, scale it and talk to a coach or doctor. 💪\n\nPost your time or reps in the comments. Let's see those scores!\n\nSend this to your training partner or tag them. Make them suffer with you.\n\n#wod #fortime #functionalfitness #conditioning",
+    "bilder": [
+      "bilder/2026-10-23-1.jpg",
+      "bilder/2026-10-23-2.jpg",
+      "bilder/2026-10-23-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-22",
     "veckodag": "Thursday",
     "title": "Snatch Craft, Sharp Finish",
