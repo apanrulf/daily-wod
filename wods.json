@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-10-24",
+    "veckodag": "Saturday",
+    "title": "Split Decision",
+    "format": "Partner AMRAP 30 · one works, one rests",
+    "workout": [
+      "Teams of 2 · one works at a time",
+      "AMRAP 30 min (team rounds):",
+      "30/24 cal Row",
+      "20 Pull-ups",
+      "24 Goblet squats (24/16 kg · 53/35 lb)",
+      "80 m Farmer carry (2x 22.5/15 kg · 2x 50/35 lb)",
+      "Split reps any way you like",
+      "Partners can switch at any time",
+      "Both partners finish each movement together before moving on",
+      "Score = team rounds + reps (1 rep = 1 cal or 1 rep or 1 m)"
+    ],
+    "scaling": [
+      "Pull-ups: ring rows or banded pull-ups, same reps",
+      "Goblet squats: lighter KB (16/12 kg · 35/26 lb) or air squats",
+      "Carry: lighter DBs or KB, shorter lengths with more rests"
+    ],
+    "stimulus": "A steady 30-minute grind with built-in rest. Aim for about 5 team rounds at a pace where the pull-ups never fall apart. Keep the work/rest swaps smooth and short.",
+    "strategy": [
+      "Pull-ups: swap at the first sign of fatigue, not after failure.",
+      "Row and carry are your pace setters. Keep them smooth.",
+      "Plan swaps in advance: e.g. 10/10 pull-ups, 12/12 squats."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: pull-ups (strict or kipping) and loads as prescribed."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Banded pull-ups, 16/12 kg KB goblet squats, 15/10 kg DB carry."
+      },
+      {
+        "name": "Beginner",
+        "text": "Ring rows, air squats or 8 kg KB, 10/7.5 kg DB carry, 20 cal row."
+      }
+    ],
+    "focus": [
+      "pull",
+      "engine",
+      "grip",
+      "legs"
+    ],
+    "caption": "Two athletes. One work station. Zero hiding. 🔥\n\nSATURDAY PARTNER WOD: SPLIT DECISION\nTeams of 2 · one works at a time\nAMRAP 30 min (team rounds):\n30/24 cal Row\n20 Pull-ups\n24 Goblet squats (24/16 kg · 53/35 lb)\n80 m Farmer carry (2x 22.5/15 kg · 2x 50/35 lb)\n\nSplit the reps any way you like. Both partners finish each movement before moving on. Score = team rounds + reps.\n\nScaling:\n- Pull-ups: ring rows or banded pull-ups\n- Goblet squats: lighter KB or air squats\n- Carry: lighter DBs, more rests\n\nCoach note: This is a 30-minute grind with built-in rest. Aim for about 5 team rounds. Swap before form breaks, especially on pull-ups. Keep the row and carry smooth. If you're injured or unsure, scale and talk to a coach or doctor.\n\nPost your team rounds + reps in the comments. 💪\n\nSend this to your training partner or tag them now.\n\n#wod #amrap #functionalfitness #metcon",
+    "bilder": [
+      "bilder/2026-10-24-1.jpg",
+      "bilder/2026-10-24-2.jpg",
+      "bilder/2026-10-24-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-23",
     "veckodag": "Friday",
     "title": "Bike, Hinge, Dip",
