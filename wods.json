@@ -1,5 +1,63 @@
 [
   {
+    "datum": "2026-10-25",
+    "veckodag": "Sunday",
+    "title": "Slow Rotation Sunday",
+    "format": "Active Recovery · 40 min easy",
+    "workout": [
+      "A. 24 min easy aerobic, Zone 1-2",
+      "Rotate every 6 min: Row, Bike, Easy jog, Brisk walk",
+      "Nose breathing, full sentences",
+      "B. 2 Rounds, no rush:",
+      "6/side World's greatest stretch",
+      "8/side 90/90 hip switches, slow",
+      "10 Wall slides, forearms on wall",
+      "8/side Shoulder circles (CARs), controlled",
+      "C. Hold and breathe:",
+      "60 sec/side Lat stretch on rig or doorway",
+      "60 sec Deep squat hold (hold a post if needed)",
+      "3 min Legs up the wall, easy breathing"
+    ],
+    "scaling": [
+      "Short on time: cut A to 15 min and keep B and C.",
+      "Stiff or sore spots: shrink the range and go slower.",
+      "Pain, not just tightness? Skip it and talk to a coach or doctor."
+    ],
+    "stimulus": "No intensity today. You should finish feeling looser and fresher than you started. If your breathing gets heavy, slow down.",
+    "strategy": [
+      "Keep every minute of A conversational.",
+      "Move slowly through B and own the end range.",
+      "In C, relax on each exhale and let the position settle."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 24 min easy rotation, then B and C without rushing."
+      },
+      {
+        "name": "Intermediate",
+        "text": "18 min easy on one or two machines. 1 round of B, then all of C."
+      },
+      {
+        "name": "Beginner",
+        "text": "15 min easy walk or bike. 1 round of B at half range. Hold C for 30 sec."
+      }
+    ],
+    "focus": [
+      "recovery",
+      "mobility",
+      "aerobic base",
+      "hips and shoulders"
+    ],
+    "caption": "Sunday is for recovery. Move easy, breathe slow, and show up fresh on Monday. 💪\n\nSLOW ROTATION SUNDAY\nActive Recovery · 40 min easy\n\nA. 24 min easy aerobic, Zone 1-2\nRotate every 6 min: Row, Bike, Easy jog, Brisk walk\nNose breathing, full sentences\n\nB. 2 Rounds, no rush:\n6/side World's greatest stretch\n8/side 90/90 hip switches, slow\n10 Wall slides, forearms on wall\n8/side Shoulder circles (CARs), controlled\n\nC. Hold and breathe:\n60 sec/side Lat stretch on rig or doorway\n60 sec Deep squat hold (hold a post if needed)\n3 min Legs up the wall, easy breathing\n\nScaled options:\n- Short on time: cut A to 15 min and keep B and C.\n- Stiff or sore spots: shrink the range and go slower.\n- Pain, not just tightness? Skip it and talk to a coach or doctor.\n\nCoach note: No intensity today. You should finish looser and fresher than you started. If your breathing gets heavy, slow down.\n\nHow did it feel? Drop your total minutes and your favorite stretch in the comments. ⏱️\n\nSend this to your training partner and make it a recovery date.\n\n#wod #workoutoftheday #functionalfitness",
+    "bilder": [
+      "bilder/2026-10-25-1.jpg",
+      "bilder/2026-10-25-2.jpg",
+      "bilder/2026-10-25-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-24",
     "veckodag": "Saturday",
     "title": "Split Decision",
