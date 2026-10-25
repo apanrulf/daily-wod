@@ -108,11 +108,11 @@ Med `karusell` eller ingen inställning alls blir det tre bilder. Karusellen rä
 ## Citat
 Flödet *Dagens citat* (`.github/workflows/dagens-citat.yml`) har inget schema. Du startar det själv under **Actions → Dagens citat → Run workflow**, och efter ett par minuter ligger citatet på Instagram. Det behöver inga nya hemligheter.
 
-- **Ett citat per dag:** startar du flödet igen samma dag händer ingenting, eftersom dagens citat redan är publicerat.
+- **Flera om dagen:** varje körning skriver och publicerar ett nytt citat, så du kan köra flödet så ofta du vill. Startar du det flera gånger direkt efter varandra körs de i tur och ordning, men GitHub behåller bara en körning i kö åt gången.
 - **Teman och hashtags:** ändra avsnittet *Citat* i `varumarke.md`.
 - **Prova utan att publicera:** kör `python main.py citat-skapa --torrkorning` på datorn.
 
-Citaten sparas i `citat.json` och bilderna som `bilder/citat-ÅÅÅÅ-MM-DD.jpg`. Coachen ser de senaste 30 citaten så att teman och formuleringar inte upprepas.
+Citaten sparas i `citat.json` och bilderna som `bilder/citat-ÅÅÅÅ-MM-DD-TTMMSS.jpg`. Coachen ser de senaste 30 citaten så att teman och formuleringar inte upprepas.
 
 ## Ändra publiceringstiden
 Öppna `.github/workflows/dagens-wod.yml` och ändra raden `cron: "17 5 * * *"`. Tiden anges i UTC, så 05:17 UTC är 07:17 svensk sommartid och 06:17 vintertid.
@@ -145,7 +145,7 @@ cp .env.example .env             # fyll i ANTHROPIC_API_KEY och IG_ACCESS_TOKEN
 
 python main.py status                        # kontrollera kopplingen
 python main.py wod-skapa --torrkorning       # dagens pass och bild, sparas inte
-python main.py citat-skapa --torrkorning     # dagens citat och bild, sparas inte
+python main.py citat-skapa --torrkorning     # ett nytt citat och bild, sparas inte
 python main.py wod-skapa                     # som ovan men du kan ge feedback och spara
 ```
 Bilderna hamnar i mappen `bilder`, som `2026-10-15-1.jpg` till `-3.jpg`. Med `--torrkorning` publiceras ingenting.

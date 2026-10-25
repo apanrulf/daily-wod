@@ -104,9 +104,9 @@ def cmd_status(cfg, ig, llm, args):
     day = today(cfg).isoformat()
     wod_today = next((w for w in load_json(cfg.wod_path, []) if w.get("datum") == day), None)
     print(f"Dagens WOD: {wod_today['title']} ({wod_today['status']})" if wod_today else "Dagens WOD: inte skapat än")
-    quote_today = next((q for q in load_json(cfg.citat_path, []) if q.get("datum") == day), None)
-    if quote_today:
-        print(f"Dagens citat: {quote_today['quote']} ({quote_today['status']})")
+    quotes = load_json(cfg.citat_path, [])
+    if quotes:
+        print(f"Senaste citat: {quotes[0]['quote']} ({quotes[0]['status']})")
     print("Kopplingen till Instagram fungerar.")
 
 
@@ -341,26 +341,28 @@ def cmd_wod_publish(cfg, ig, llm, args):
     prune_images(cfg, images)
 
 
+def quote_sort_key(entry):
+    # Nyare citat har ett id som börjar med datum och klockslag. Det första citatet har bara datum.
+    return entry.get("id") or entry.get("datum", "")
+
+
 def cmd_quote_create(cfg, ig, llm, args):
-    day = today(cfg)
-    history = load_json(cfg.citat_path, [])
-    existing = next((q for q in history if q.get("datum") == day.isoformat()), None)
-    if existing and existing.get("status") == "publicerad":
-        print(f"Dagens citat är redan publicerat: {existing.get('permalink') or existing.get('media_id')}")
-        return
-    if existing and not args.nytt:
-        print(f'Dagens citat finns redan ("{existing["quote"]}"). Lägg till --nytt för att skriva ett nytt.')
-        return
+    """Skriver ett nytt citat varje gång, så att flödet kan köras flera gånger om dagen."""
     require_terminal(args)
-
-    past = [q for q in history if q.get("datum") != day.isoformat()]
+    history = load_json(cfg.citat_path, [])
+    now = datetime.now(ZoneInfo(cfg.timezone))
+    base = now.strftime("%Y-%m-%d-%H%M%S")
+    taken = {q.get("id") for q in history}
+    quote_id, n = base, 2
+    while quote_id in taken:
+        quote_id, n = f"{base}-{n}", n + 1
     handle = cfg.ig_handle or ig.username
-    image_rel = f"{cfg.images_dir.name}/citat-{day.isoformat()}.jpg"
+    image_rel = f"{cfg.images_dir.name}/citat-{quote_id}.jpg"
 
-    print(f"Coachen skriver dagens citat ({day.strftime('%A %Y-%m-%d')}) ...")
-    quote = generate_quote(llm, cfg, past, day)
+    print("Coachen skriver ett nytt citat ...")
+    quote = generate_quote(llm, cfg, history)
     while True:
-        render_quote_image(quote, day, handle, cfg.images_dir / f"citat-{day.isoformat()}.jpg")
+        render_quote_image(quote, handle, cfg.images_dir / f"citat-{quote_id}.jpg")
         print(f"\n{'=' * 60}\n{quote['quote']}\n\nBild: {image_rel}\n\nBildtext:\n{quote['caption']}\n{'=' * 60}")
         if args.auto:
             break
@@ -374,27 +376,27 @@ def cmd_quote_create(cfg, ig, llm, args):
             feedback = input("Vad ska ändras? ").strip()
             if feedback:
                 print("Coachen skriver om ...")
-                quote = generate_quote(llm, cfg, past, day, feedback=feedback, previous=quote)
+                quote = generate_quote(llm, cfg, history, feedback=feedback, previous=quote)
 
     if ig.dry_run:
         print(f"[torrkörning] Bild: {image_rel}. Inget sparas i {cfg.citat_path.name}.")
         return
-    entry = {"datum": day.isoformat(), "veckodag": day.strftime("%A"), **quote,
-             "bild": image_rel, "status": "redo"}
-    history = sorted([entry] + past, key=lambda q: q.get("datum", ""), reverse=True)
+    for old in history:
+        if old.get("status") == "redo":
+            old["status"] = "avbruten"  # en tidigare körning som aldrig publicerades
+    entry = {"id": quote_id, "datum": now.date().isoformat(), "skapad": now.isoformat(timespec="minutes"),
+             **quote, "bild": image_rel, "status": "redo"}
+    history = sorted([entry] + history, key=quote_sort_key, reverse=True)
     save_json(cfg.citat_path, history)
     print(f"✓ Sparat. {image_rel} väntar på publicering.")
 
 
 def cmd_quote_publish(cfg, ig, llm, args):
-    day = today(cfg)
+    """Publicerar det senast skapade citatet som väntar. Redan publicerade citat publiceras aldrig igen."""
     history = load_json(cfg.citat_path, [])
-    entry = next((q for q in history if q.get("datum") == day.isoformat()), None)
+    entry = next((q for q in history if q.get("status") == "redo"), None)
     if entry is None:
-        sys.exit("Det finns inget citat för i dag. Kör citat-skapa först.")
-    if entry.get("status") == "publicerad":
-        print(f"Dagens citat är redan publicerat: {entry.get('permalink') or entry.get('media_id')}")
-        return
+        sys.exit("Det finns inget citat som väntar på publicering. Kör citat-skapa först.")
     if not cfg.image_base_url:
         sys.exit("BILD_BAS_URL saknas. Den sätts automatiskt i GitHub Actions, se README.")
     require_terminal(args)
@@ -418,7 +420,7 @@ def cmd_quote_publish(cfg, ig, llm, args):
 
     result = ig.publish_image(url, entry["caption"], quote_alt_text(entry))
     if ig.dry_run:
-        print("[torrkörning] Skulle ha publicerat dagens citat.")
+        print("[torrkörning] Skulle ha publicerat citatet.")
         return
     entry.update(
         status="publicerad",
@@ -459,10 +461,8 @@ def build_parser():
 
     sub.add_parser("wod-publicera", parents=[common], help="Publicera dagens WOD på Instagram.")
 
-    sq = sub.add_parser("citat-skapa", parents=[common], help="Skriv dagens motiverande citat och gör bilden.")
-    sq.add_argument("--nytt", action="store_true", help="Skriv ett nytt även om dagens redan finns.")
-
-    sub.add_parser("citat-publicera", parents=[common], help="Publicera dagens citat på Instagram.")
+    sub.add_parser("citat-skapa", parents=[common], help="Skriv ett nytt motiverande citat och gör bilden.")
+    sub.add_parser("citat-publicera", parents=[common], help="Publicera det senast skapade citatet på Instagram.")
 
     sp = sub.add_parser("posta", parents=[common], help="Skriv bildtext och publicera nästa inlägg i kön.")
     sp.add_argument("--antal", type=int, default=1, help="Hur många inlägg från kön (standard 1).")

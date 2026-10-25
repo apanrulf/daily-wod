@@ -17,13 +17,14 @@ INK = BG
 SOFT = (92, 112, 28)  # dämpad mörkgrön för datum och sidfot på limegrönt
 INNER = W - 2 * MARGIN
 
-QUOTE_SYSTEM = """You are the head coach behind an Instagram account that posts one original workout of the day (WOD) every day, in English. A few times a week the account also posts a short motivational quote.
+QUOTE_SYSTEM = """You are the head coach behind an Instagram account that posts one original workout of the day (WOD) every day, in English. The account also posts short motivational quotes, sometimes several a day.
 
 <brand>
 {brand}
 </brand>
 
-Write today's quote.
+Write a new quote.
+- It is a general, timeless motivational quote. It must not mention or hint at a date, weekday, season, "today's" session or any specific workout, so it works on any day.
 - It must be your own original line. Never quote, paraphrase or attribute words to real people, athletes, coaches, books or films, and never present it as anyone else's words.
 - It is about training and the mindset behind it: showing up, consistency, effort, patience, recovery, community, discomfort, progress over perfection.
 - Short and punchy, so it can be read in a tiny thumbnail: at most 12 words and 80 characters.
@@ -36,7 +37,7 @@ Reply with only a JSON object inside <citat></citat> tags, with exactly these ke
   "quote": "The quote itself",
   "highlight": "1-3 consecutive words copied exactly from the quote that carry its meaning; they get a dark box on the image",
   "theme": "One or two words for variety tracking, e.g. 'consistency'",
-  "caption": "Instagram caption in English: the quote as the first line, 2-4 short sentences from the coach that tie it to training, a call to save the post or send it to a training partner who needs it, then 3-5 hashtags from the brand description. Max 1000 characters."
+  "caption": "Instagram caption in English: the quote as the first line, 2-4 short sentences from the coach about the mindset behind it, just as general and timeless (no dates, weekdays or references to a specific workout), a call to save the post or send it to a training partner who needs it, then 3-5 hashtags from the brand description. Max 1000 characters."
 }}"""
 
 FIELDS = {"quote": str, "highlight": str, "theme": str, "caption": str}
@@ -55,6 +56,10 @@ def highlight_span(quote, highlight):
     return None
 
 
+DATED = re.compile(
+    r"\b(monday|tuesday|wednesday|thursday|friday|saturday|sunday|wod|today'?s (workout|session|wod))\b", re.I)
+
+
 def _validate(c):
     for key, kind in FIELDS.items():
         if not isinstance(c.get(key), kind) or not c.get(key).strip():
@@ -67,24 +72,28 @@ def _validate(c):
         raise ValueError('"highlight" måste vara 1–3 ord i följd som står ordagrant i citatet')
     if len(c["caption"]) > 2200:
         raise ValueError("bildtexten är längre än Instagrams gräns på 2 200 tecken")
+    if DATED.search(c["quote"]) or DATED.search(c["caption"]):
+        raise ValueError("citatet och bildtexten ska vara allmänna: inga veckodagar och inga hänvisningar till dagens pass eller WOD")
     if "crossfit" in json.dumps(c, ensure_ascii=False).lower():
         raise ValueError('ordet "CrossFit" får inte förekomma')
     return c
 
 
-def generate_quote(llm, cfg, history, day, feedback=None, previous=None, attempts=3):
-    """Returnerar ett validerat citat som dict. Försöker igen om svaret inte går att använda."""
+def generate_quote(llm, cfg, history, feedback=None, previous=None, attempts=3):
+    """Returnerar ett validerat citat som dict. Försöker igen om svaret inte går att använda.
+
+    Claude får inget datum, så att citatet blir allmänt och inte kopplas till dagens pass.
+    """
     brand = cfg.brand_path.read_text(encoding="utf-8")
-    recent = [{k: q.get(k) for k in ("datum", "quote", "theme")} for q in history[:30]]
+    recent = [{k: q.get(k) for k in ("quote", "theme")} for q in history[:30]]
     prompt = (
-        f"Today is {day.strftime('%A')}, {day.isoformat()}.\n\n"
         "Recent quotes, newest first:\n<history>\n"
         + json.dumps(recent, ensure_ascii=False, indent=1)
         + "\n</history>"
     )
     if previous and feedback:
         prompt += (
-            "\n\nYour previous draft for today:\n<previous>\n"
+            "\n\nYour previous draft:\n<previous>\n"
             + json.dumps(previous, ensure_ascii=False, indent=1)
             + f"\n</previous>\nThe owner's feedback: {feedback}\nWrite a new version."
         )
@@ -150,15 +159,13 @@ def _layout_quote(draw, words, width, max_h):
     return font, _wrap(draw, words, font, width), int(80 * 0.96)
 
 
-def render_quote_image(c, day, handle, path):
+def render_quote_image(c, handle, path):
+    """Citatbilden. Utan datum, eftersom citaten är allmänna och inte hör till en viss dag."""
     img = Image.new("RGB", (W, H), QUOTE_BG)
     draw = ImageDraw.Draw(img)
 
-    # Överkant: etikett och datum
-    y = MARGIN - 10
-    draw.text((MARGIN, y), "MINDSET", font=_font("BebasNeue-Regular.ttf", 60), fill=INK)
-    draw.text((W - MARGIN, y + 34), day.strftime("%A · %d %b %Y").upper(),
-              font=_font("Barlow-SemiBold.ttf", 30), fill=SOFT, anchor="rs")
+    # Överkant: etikett
+    draw.text((MARGIN, MARGIN - 10), "MINDSET", font=_font("BebasNeue-Regular.ttf", 60), fill=INK)
 
     # Stort citattecken
     draw.text((MARGIN - 14, 150), "“", font=_font("BebasNeue-Regular.ttf", 340), fill=INK)

@@ -1,6 +1,6 @@
 name: Dagens citat
 
-# Körs bara för hand: Actions -> Dagens citat -> Run workflow.
+# Körs bara för hand: Actions -> Dagens citat -> Run workflow. Varje körning publicerar ett nytt citat.
 on:
   workflow_dispatch:
 
@@ -29,7 +29,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Skriv dagens citat och gör bilden
+      - name: Skriv ett nytt citat och gör bilden
         run: python main.py citat-skapa --auto
 
       - name: Lägg upp bilden i repot
@@ -37,7 +37,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add citat.json bilder/
-          git diff --cached --quiet || git commit -m "Citat $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "Citat $(date -u +'%F %H:%M')"
           git pull --rebase # Om något annat har pushats under körningen
           git push
 
@@ -51,6 +51,6 @@ jobs:
         if: always()
         run: |
           git add citat.json bilder/ # bilder/ tar med de gamla bilderna som tagits bort
-          git diff --cached --quiet || git commit -m "Publicerat citat $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "Publicerat citat $(date -u +'%F %H:%M')"
           git pull --rebase # Om något annat har pushats under körningen
           git push

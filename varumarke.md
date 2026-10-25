@@ -43,7 +43,7 @@ Barbell and plates, dumbbells, kettlebells, pull-up bar, rings, rower, assault/e
 - Lova inget som inte står i den här filen.
 
 ## Citat
-Några gånger i veckan lägger kontot upp ett eget motiverande citat. Citaten handlar om att dyka upp, kontinuitet, ansträngning, tålamod, återhämtning och gemenskap. De är alltid coachens egna ord, aldrig någon annans.
+Några gånger i veckan lägger kontot upp ett eget motiverande citat. Citaten handlar om att dyka upp, kontinuitet, ansträngning, tålamod, återhämtning och gemenskap. De är alltid coachens egna ord, aldrig någon annans. Citaten är allmänna och tidlösa: inga datum, inga veckodagar och ingen koppling till dagens pass.
 Hashtags för citat, välj 3–5: #motivation #fitnessmotivation #mindset #trainhard #functionalfitness #consistency #nevergiveup
 
 ## Hashtags

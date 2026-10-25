@@ -113,37 +113,54 @@ def run(argv, **kw):
         return str(e)
 
 
-IMAGE = WORK / "bilder" / f"citat-{TODAY}.jpg"
+def quote_images():
+    return {p.name for p in (WORK / "bilder").glob("citat-*.jpg")}
 
-# 1. Skapa: för långt citat, markering som inte finns i citatet, CrossFit, sedan ett bra svar
+
+def publish_ok():
+    """Publicerar det citat som väntar. Returnerar body för containern."""
+    llm, sess, ig = fresh()
+    run(["citat-publicera", "--auto"], ig=ig, llm=llm)
+    media = [c[2] for c in posts(sess) if c[1] == "v25.0/111/media"]
+    return media, sess
+
+
+# 1. Skapa: för långt citat, markering som inte finns i citatet, sedan ett bra svar
 too_long = dict(GOOD, quote="This is a very long quote that goes on and on and never seems to stop at all today")
 bad_highlight = dict(GOOD, highlight="never quit")
 llm, sess, ig = fresh([reply(too_long), reply(bad_highlight), reply(GOOD)])
 run(["citat-skapa", "--auto"], ig=ig, llm=llm)
 h = history()
+first = h[0]
 retries = [c["messages"][-1]["content"] for c in llm.messages.calls[1:]]
 check(len(llm.messages.calls) == 3, "skapa: försöker igen efter för långt citat och fel markering")
 check("för långt" in retries[0] and '"highlight"' in retries[1], "skapa: felen beskrivs på svenska för Claude")
-check(h[0]["datum"] == TODAY and h[0]["status"] == "redo" and h[0]["quote"] == GOOD["quote"], "skapa: dagens citat sparas som redo, nyast först")
-check(len(h) == 3 and h[1]["quote"] == "Old quote two." and h[0]["bild"] == f"bilder/citat-{TODAY}.jpg", "skapa: historik och bildsökväg")
+check(first["status"] == "redo" and first["quote"] == GOOD["quote"] and first["id"].startswith(TODAY), "skapa: citatet sparas som redo, nyast först, med unikt id")
+check(len(h) == 3 and h[1]["quote"] == "Old quote two." and first["bild"] == f"bilder/citat-{first['id']}.jpg", "skapa: historik och bildsökväg")
 prompt = llm.messages.calls[0]["messages"][0]["content"]
 system = llm.messages.calls[0]["system"]
 check("Old quote two." in prompt and prompt.index("Old quote two.") < prompt.index("Old quote one."), "skapa: tidigare citat skickas med, nyast först")
 check("Never quote, paraphrase or attribute" in system and "#fitnessmotivation" in system, "skapa: regler och varumärke i systemprompten")
-img = Image.open(IMAGE)
+img = Image.open(WORK / first["bild"])
 check(img.size == (1080, 1350) and img.format == "JPEG", "skapa: bilden är 1080x1350 JPEG")
 corner = img.convert("RGB").getpixel((20, 20))
 check(all(abs(a - b) < 12 for a, b in zip(corner, QUOTE_BG)), "skapa: limegrön bakgrund, inte WOD-bildernas mörka")
 check(not posts(sess) and (WORK / "wods.json").read_text() == wods_before, "skapa: inget publiceras och wods.json är orörd")
+weekday = datetime.now(ZoneInfo("Europe/Stockholm")).strftime("%A")
+check(TODAY not in prompt and weekday not in prompt and "2000-01" not in prompt, "skapa: Claude får inget datum eller veckodag")
+gray = img.convert("L")
+top_right = [gray.getpixel((x, y)) for y in range(60, 130, 3) for x in range(500, 1000, 3)]
+check(min(top_right) > 150, "skapa: inget datum på bilden")
 
-llm, sess, ig = fresh([reply(dict(GOOD, caption="Classic CrossFit motivation"))] * 3)
-err = run(["citat-skapa", "--auto", "--nytt"], ig=ig, llm=llm)
-check(err and "efter 3 försök" in err and "CrossFit" in err and history()[0]["quote"] == GOOD["quote"], "skapa: CrossFit stoppas och det sparade citatet behålls")
-
-# 2. Skapa igen: hoppar över
-llm, sess, ig = fresh([])
-run(["citat-skapa", "--auto"], ig=ig, llm=llm)
-check(not llm.messages.calls, "skapa igen: inget nytt anrop när dagens finns")
+# 2. Allmänna citat: veckodagar och dagens pass stoppas. Ett misslyckat försök rör inte det som väntar.
+llm, sess, ig = fresh([reply(dict(GOOD, quote="Monday is for showing up.", highlight="showing up")),
+                       reply(dict(GOOD, caption="Crush today's workout! #motivation")),
+                       reply(dict(GOOD, caption="Classic CrossFit motivation"))])
+err = run(["citat-skapa", "--auto"], ig=ig, llm=llm)
+retries = [c["messages"][-1]["content"] for c in llm.messages.calls[1:]]
+check(all("allmänna" in r for r in retries), "skapa: veckodagar och dagens pass stoppas")
+check(err and "efter 3 försök" in err and "CrossFit" in err, "skapa: CrossFit stoppas")
+check(history() == h, "skapa misslyckad: citatet som väntar ligger kvar orört")
 
 # 3. Publicera (med en gammal bild som ska städas bort)
 shutil.copy(WORK / "exempel.jpg", WORK / "bilder" / "2000-01-01-1.jpg")
@@ -160,10 +177,8 @@ check((WORK / "bilder" / "2000-01-01-1.jpg").exists(), "publicera misslyckad: in
 
 seen = []
 M.url_is_live = lambda url: seen.append(url) or True
-llm, sess, ig = fresh()
-run(["citat-publicera", "--auto"], ig=ig, llm=llm)
-expected = f"https://raw.githubusercontent.com/erik/daily-wod/abc123/bilder/citat-{TODAY}.jpg"
-media = [c[2] for c in posts(sess) if c[1] == "v25.0/111/media"]
+media, sess = publish_ok()
+expected = f"https://raw.githubusercontent.com/erik/daily-wod/abc123/{first['bild']}"
 check(seen == [expected] and len(media) == 1 and media[0]["image_url"] == expected, "publicera: en bild med rätt URL")
 check(media[0]["caption"] == GOOD["caption"] and GOOD["quote"] in media[0]["alt_text"], "publicera: bildtext och alt-text med citatet")
 check("is_carousel_item" not in media[0] and posts(sess)[-1][1] == "v25.0/111/media_publish", "publicera: vanlig bild, inte karusell")
@@ -173,43 +188,63 @@ check((WORK / "wods.json").read_text() == wods_before, "publicera: wods.json är
 waiting = {Path(rel).name for w in json.loads(wods_before) if w.get("status") == "redo"
            for rel in (w.get("bilder") or ([w["bild"]] if w.get("bild") else []))}
 left = {p.name for p in (WORK / "bilder").glob("*.jpg")}
-check(left == {f"citat-{TODAY}.jpg"} | waiting and (WORK / "bilder" / ".gitkeep").exists(), "publicera: gamla bilder tas bort, bara dagens citat (och väntande WOD) kvar")
+check(left == {Path(first["bild"]).name} | waiting and (WORK / "bilder" / ".gitkeep").exists(), "publicera: gamla bilder tas bort, bara senaste citatet (och väntande WOD) kvar")
 
 llm, sess, ig = fresh()
-run(["citat-publicera", "--auto"], ig=ig, llm=llm)
-check(not posts(sess), "publicera igen: ingen dubbelpost")
-llm, sess, ig = fresh([])
-run(["citat-skapa", "--auto", "--nytt"], ig=ig, llm=llm)
-check(not llm.messages.calls, "skapa --nytt: skriver inte över ett publicerat citat")
+err = run(["citat-publicera", "--auto"], ig=ig, llm=llm)
+check(err and "väntar" in err and not posts(sess), "publicera igen: ingen dubbelpost när inget väntar")
 
-# 4. Torrkörning sparar inget
-(WORK / "citat.json").write_text(json.dumps(h[1:]))
-IMAGE.unlink()
+# 4. Flera citat samma dag
+second_q = dict(GOOD, quote="Consistency beats intensity.", highlight="Consistency")
+llm, sess, ig = fresh([reply(second_q)])
+run(["citat-skapa", "--auto"], ig=ig, llm=llm)
+h = history()
+check(len(llm.messages.calls) == 1 and h[0]["quote"] == second_q["quote"] and h[0]["id"] != first["id"], "flera om dagen: ett nytt citat skapas samma dag")
+check(first["quote"] in llm.messages.calls[0]["messages"][0]["content"], "flera om dagen: det förra citatet finns i historiken")
+media, sess = publish_ok()
+check(len(media) == 1 and media[0]["image_url"].endswith(h[0]["bild"]), "flera om dagen: det nya citatet publiceras")
+h = history()
+check([q["status"] for q in h[:2]] == ["publicerad", "publicerad"] and quote_images() == {Path(h[0]["bild"]).name}, "flera om dagen: båda publicerade, bara den senaste bilden kvar")
+
+# 5. Ett citat som aldrig publicerades ersätts av nästa körning
+llm, sess, ig = fresh([reply(GOOD)])
+run(["citat-skapa", "--auto"], ig=ig, llm=llm)
+stuck = history()[0]
+llm, sess, ig = fresh([reply(second_q)])
+run(["citat-skapa", "--auto"], ig=ig, llm=llm)
+h = history()
+check(h[0]["status"] == "redo" and h[1]["id"] == stuck["id"] and h[1]["status"] == "avbruten", "avbrutet: det gamla väntande citatet markeras som avbrutet")
+media, sess = publish_ok()
+check(len(media) == 1 and media[0]["image_url"].endswith(h[0]["bild"]), "avbrutet: bara det nya citatet publiceras")
+check(not (WORK / stuck["bild"]).exists(), "avbrutet: bilden till det avbrutna citatet städas bort")
+
+# 6. Torrkörning sparar inget
+before, images_before = history(), quote_images()
 llm, sess, ig = fresh([reply(GOOD)])
 run(["citat-skapa", "--auto", "--torrkorning"], ig=ig, llm=llm)
-check(IMAGE.exists() and len(history()) == 2, "torrkörning: bilden görs men inget sparas")
+check(len(quote_images()) == len(images_before) + 1 and history() == before, "torrkörning: bilden görs men inget sparas")
 
-# 5. Interaktivt med feedback
+# 7. Interaktivt med feedback
 answers = iter(["f", "Shorter please", "j"])
 orig_input, orig_tty = builtins.input, sys.stdin.isatty
 builtins.input = lambda prompt="": next(answers)
 sys.stdin.isatty = lambda: True
-second = dict(GOOD, quote="Consistency beats intensity.", highlight="Consistency")
+second = dict(GOOD, quote="Progress over perfection.", highlight="Progress")
 llm, sess, ig = fresh([reply(GOOD), reply(second)])
 run(["citat-skapa"], ig=ig, llm=llm)
 builtins.input, sys.stdin.isatty = orig_input, orig_tty
 fb = llm.messages.calls[1]["messages"][0]["content"]
 check("Shorter please" in fb and GOOD["quote"] in fb, "interaktivt: feedback och förra förslaget skickas")
-check(history()[0]["quote"] == "Consistency beats intensity.", "interaktivt: den nya versionen sparas")
+check(history()[0]["quote"] == "Progress over perfection.", "interaktivt: den nya versionen sparas")
 
-# 6. Markeringen hittar orden oavsett skiljetecken och versaler
+# 8. Markeringen hittar orden oavsett skiljetecken och versaler
 check(highlight_span("Show up tired. Leave proud.", "leave PROUD") == (3, 5), "markering: skiljetecken och versaler ignoreras")
 check(highlight_span("Show up tired.", "show tired") is None, "markering: orden måste stå i följd")
 
-# 7. Långt citat ryms: inga mörka pixlar i marginalerna
+# 9. Långt citat ryms: inga mörka pixlar i marginalerna
 long_q = {"quote": "Uncomfortable reps today become the strength everyone calls natural talent tomorrow.",
           "highlight": "natural talent"}
-im = Image.open(render_quote_image(long_q, datetime(2026, 10, 28), "dailywod.engine", WORK / "bilder" / "lang.jpg")).convert("L")
+im = Image.open(render_quote_image(long_q, "dailywod.engine", WORK / "bilder" / "lang.jpg")).convert("L")
 w, hgt = im.size
 edges = [im.getpixel((x, y)) for y in range(0, hgt, 4) for x in list(range(0, 50)) + list(range(w - 50, w))]
 check(min(edges) > 120, "långt citat: ingen text i sidomarginalerna")
