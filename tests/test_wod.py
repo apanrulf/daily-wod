@@ -174,12 +174,19 @@ llm, sess, ig = fresh()
 err = run(["wod-publicera", "--auto"], ig=ig, llm=llm)
 check(err and "BILD_BAS_URL" in err and not posts(sess), "publicera: kräver BILD_BAS_URL")
 
+# Gamla bilder och ett citat som väntar på publicering, för att testa städningen
+for name in ("2000-01-01-1.jpg", "citat-2000-01-01.jpg", "citat-vantar.jpg"):
+    shutil.copy(WORK / "exempel.jpg", WORK / "bilder" / name)
+(WORK / "citat.json").write_text(json.dumps([
+    {"datum": "2000-01-05", "quote": "Waiting.", "bild": "bilder/citat-vantar.jpg", "status": "redo"}]))
+
 # 4. Publicera när bilden inte går att nå
 os.environ["BILD_BAS_URL"] = "https://raw.githubusercontent.com/erik/daily-wod/abc123/"
 M.url_is_live = lambda url: False
 llm, sess, ig = fresh()
 err = run(["wod-publicera", "--auto"], ig=ig, llm=llm)
 check(err and "publika adressen" in err and not posts(sess), "publicera: stoppar om bilden inte går att nå")
+check((WORK / "bilder" / "2000-01-01-1.jpg").exists(), "publicera misslyckad: inga bilder tas bort")
 
 # 5. Publicera på riktigt
 seen = []
@@ -199,6 +206,9 @@ order = [c[1] for c in posts(sess)]
 check(order[-1] == "v25.0/111/media_publish" and posts(sess)[-1][2] == {"creation_id": "cont4"} and order.count("v25.0/111/media_publish") == 1, "publicera: media_publish sist, med karusellens id")
 h = history()
 check(h[0]["status"] == "publicerad" and h[0]["permalink"] == "https://ig/p/wod", "publicera: status och länk sparas")
+left = sorted(p.name for p in (WORK / "bilder").glob("*.jpg"))
+check(left == sorted([Path(rel).name for rel in CAROUSEL] + ["citat-vantar.jpg"]), "publicera: gamla bilder tas bort, dagens och väntande citat behålls")
+check((WORK / "bilder" / ".gitkeep").exists(), "publicera: .gitkeep ligger kvar")
 
 # 6. Publicera igen: inget händer
 llm, sess, ig = fresh()

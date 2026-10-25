@@ -57,7 +57,7 @@ jobs:
       - name: Spara att det är publicerat
         if: always()
         run: |
-          git add wods.json
+          git add wods.json bilder/ # bilder/ tar med de gamla bilderna som tagits bort
           git diff --cached --quiet || git commit -m "Publicerat WOD $(date -u +%F)"
           git pull --rebase # Om något annat har pushats under körningen
           git push

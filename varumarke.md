@@ -42,5 +42,9 @@ Barbell and plates, dumbbells, kettlebells, pull-up bar, rings, rower, assault/e
 - Ge inga medicinska råd eller råd om skador, utöver att skala och söka hjälp.
 - Lova inget som inte står i den här filen.
 
+## Citat
+Några gånger i veckan lägger kontot upp ett eget motiverande citat. Citaten handlar om att dyka upp, kontinuitet, ansträngning, tålamod, återhämtning och gemenskap. De är alltid coachens egna ord, aldrig någon annans.
+Hashtags för citat, välj 3–5: #motivation #fitnessmotivation #mindset #trainhard #functionalfitness #consistency #nevergiveup
+
 ## Hashtags
 Välj 3–5 som passar dagens pass: #wod #workoutoftheday #functionalfitness #metcon #amrap #emom #fortime #conditioning #strengthtraining #homegym

@@ -22,6 +22,7 @@ class Config:
     state_path: Path
     flagged_path: Path
     wod_path: Path
+    citat_path: Path
     images_dir: Path
     image_base_url: str | None
     ig_handle: str | None
@@ -48,6 +49,7 @@ def load_config() -> Config:
         state_path=ROOT / "state.json",
         flagged_path=ROOT / "flaggade.md",
         wod_path=ROOT / "wods.json",
+        citat_path=ROOT / "citat.json",
         images_dir=ROOT / "bilder",
         image_base_url=os.getenv("BILD_BAS_URL") or None,
         ig_handle=os.getenv("IG_HANDLE") or None,

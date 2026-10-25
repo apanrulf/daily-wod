@@ -1,0 +1,56 @@
+name: Dagens citat
+
+# Körs bara för hand: Actions -> Dagens citat -> Run workflow.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write # Behövs för att lägga upp bilden och spara historiken i repot.
+
+concurrency:
+  group: dagens-citat
+  cancel-in-progress: false
+
+jobs:
+  citat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Skriv dagens citat och gör bilden
+        run: python main.py citat-skapa --auto
+
+      - name: Lägg upp bilden i repot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add citat.json bilder/
+          git diff --cached --quiet || git commit -m "Citat $(date -u +%F)"
+          git pull --rebase # Om något annat har pushats under körningen
+          git push
+
+      - name: Publicera på Instagram
+        run: |
+          # Instagram hämtar bilden direkt från det publika repot, från just den här commiten.
+          export BILD_BAS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$(git rev-parse HEAD)"
+          python main.py citat-publicera --auto
+
+      - name: Spara att det är publicerat
+        if: always()
+        run: |
+          git add citat.json bilder/ # bilder/ tar med de gamla bilderna som tagits bort
+          git diff --cached --quiet || git commit -m "Publicerat citat $(date -u +%F)"
+          git pull --rebase # Om något annat har pushats under körningen
+          git push

@@ -12,6 +12,7 @@ from dotenv import set_key
 
 from agent import Approver, CommentAgent, write_caption
 from bild import render_wod_image
+from citat import alt_text as quote_alt_text, generate_quote, render_quote_image
 from config import ENV_PATH, load_config
 from instagram_api import InstagramClient, InstagramError
 from karusell import render_carousel
@@ -64,6 +65,26 @@ def image_paths(entry):
     return [entry["bild"]] if entry.get("bild") else []
 
 
+def prune_images(cfg, keep):
+    """Tar bort gamla bilder efter en lyckad publicering. Instagram har redan sin egen kopia.
+
+    Behåller bilderna som just publicerades och alla som fortfarande väntar på publicering,
+    så att WOD- och citatflödet inte tar bort varandras bilder.
+    """
+    keep = set(keep)
+    for path in (cfg.wod_path, cfg.citat_path):
+        for entry in load_json(path, []):
+            if entry.get("status") == "redo":
+                keep.update(image_paths(entry))
+    removed = 0
+    for img in cfg.images_dir.glob("*.jpg"):
+        if f"{cfg.images_dir.name}/{img.name}" not in keep:
+            img.unlink()
+            removed += 1
+    if removed:
+        print(f"Tog bort {removed} gamla bilder ur {cfg.images_dir.name}/.")
+
+
 def require_terminal(args):
     if not args.auto and not sys.stdin.isatty():
         sys.exit("Ingen terminal att fråga i. Kör interaktivt, eller lägg till --auto.")
@@ -83,6 +104,9 @@ def cmd_status(cfg, ig, llm, args):
     day = today(cfg).isoformat()
     wod_today = next((w for w in load_json(cfg.wod_path, []) if w.get("datum") == day), None)
     print(f"Dagens WOD: {wod_today['title']} ({wod_today['status']})" if wod_today else "Dagens WOD: inte skapat än")
+    quote_today = next((q for q in load_json(cfg.citat_path, []) if q.get("datum") == day), None)
+    if quote_today:
+        print(f"Dagens citat: {quote_today['quote']} ({quote_today['status']})")
     print("Kopplingen till Instagram fungerar.")
 
 
@@ -314,6 +338,97 @@ def cmd_wod_publish(cfg, ig, llm, args):
     )
     save_json(cfg.wod_path, history)
     print(f"✓ Publicerat: {result.get('permalink') or result['id']}")
+    prune_images(cfg, images)
+
+
+def cmd_quote_create(cfg, ig, llm, args):
+    day = today(cfg)
+    history = load_json(cfg.citat_path, [])
+    existing = next((q for q in history if q.get("datum") == day.isoformat()), None)
+    if existing and existing.get("status") == "publicerad":
+        print(f"Dagens citat är redan publicerat: {existing.get('permalink') or existing.get('media_id')}")
+        return
+    if existing and not args.nytt:
+        print(f'Dagens citat finns redan ("{existing["quote"]}"). Lägg till --nytt för att skriva ett nytt.')
+        return
+    require_terminal(args)
+
+    past = [q for q in history if q.get("datum") != day.isoformat()]
+    handle = cfg.ig_handle or ig.username
+    image_rel = f"{cfg.images_dir.name}/citat-{day.isoformat()}.jpg"
+
+    print(f"Coachen skriver dagens citat ({day.strftime('%A %Y-%m-%d')}) ...")
+    quote = generate_quote(llm, cfg, past, day)
+    while True:
+        render_quote_image(quote, day, handle, cfg.images_dir / f"citat-{day.isoformat()}.jpg")
+        print(f"\n{'=' * 60}\n{quote['quote']}\n\nBild: {image_rel}\n\nBildtext:\n{quote['caption']}\n{'=' * 60}")
+        if args.auto:
+            break
+        choice = input("[j] spara  [f] ge feedback  [n] avbryt: ").strip().lower()
+        if choice in ("j", "ja", "y"):
+            break
+        if choice in ("n", "nej"):
+            print("Avbrutet. Inget sparat.")
+            return
+        if choice == "f":
+            feedback = input("Vad ska ändras? ").strip()
+            if feedback:
+                print("Coachen skriver om ...")
+                quote = generate_quote(llm, cfg, past, day, feedback=feedback, previous=quote)
+
+    if ig.dry_run:
+        print(f"[torrkörning] Bild: {image_rel}. Inget sparas i {cfg.citat_path.name}.")
+        return
+    entry = {"datum": day.isoformat(), "veckodag": day.strftime("%A"), **quote,
+             "bild": image_rel, "status": "redo"}
+    history = sorted([entry] + past, key=lambda q: q.get("datum", ""), reverse=True)
+    save_json(cfg.citat_path, history)
+    print(f"✓ Sparat. {image_rel} väntar på publicering.")
+
+
+def cmd_quote_publish(cfg, ig, llm, args):
+    day = today(cfg)
+    history = load_json(cfg.citat_path, [])
+    entry = next((q for q in history if q.get("datum") == day.isoformat()), None)
+    if entry is None:
+        sys.exit("Det finns inget citat för i dag. Kör citat-skapa först.")
+    if entry.get("status") == "publicerad":
+        print(f"Dagens citat är redan publicerat: {entry.get('permalink') or entry.get('media_id')}")
+        return
+    if not cfg.image_base_url:
+        sys.exit("BILD_BAS_URL saknas. Den sätts automatiskt i GitHub Actions, se README.")
+    require_terminal(args)
+
+    url = f"{cfg.image_base_url.rstrip('/')}/{entry['bild']}"
+    print(f"Kontrollerar att Instagram kan hämta bilden: {url}")
+    if not url_is_live(url):
+        if not ig.dry_run:
+            sys.exit("Bilden går inte att nå på den publika adressen. Är repot publikt och bilden pushad?")
+        print("[torrkörning] Bilden går inte att nå än, men fortsätter.")
+
+    used, total = ig.publishing_limit()
+    if used >= total:
+        sys.exit(f"Dygnsgränsen är nådd ({used} av {total}). Försök igen senare.")
+
+    if not args.auto:
+        print(f"\n{'=' * 60}\n{entry['caption']}\n{'=' * 60}")
+        if input("Publicera nu? [j/n]: ").strip().lower() not in ("j", "ja", "y"):
+            print("Inte publicerat.")
+            return
+
+    result = ig.publish_image(url, entry["caption"], quote_alt_text(entry))
+    if ig.dry_run:
+        print("[torrkörning] Skulle ha publicerat dagens citat.")
+        return
+    entry.update(
+        status="publicerad",
+        media_id=result["id"],
+        permalink=result.get("permalink"),
+        publicerad=datetime.now(ZoneInfo(cfg.timezone)).isoformat(timespec="minutes"),
+    )
+    save_json(cfg.citat_path, history)
+    print(f"✓ Publicerat: {result.get('permalink') or result['id']}")
+    prune_images(cfg, [entry["bild"]])
 
 
 def cmd_refresh(cfg, ig, llm, args):
@@ -344,6 +459,11 @@ def build_parser():
 
     sub.add_parser("wod-publicera", parents=[common], help="Publicera dagens WOD på Instagram.")
 
+    sq = sub.add_parser("citat-skapa", parents=[common], help="Skriv dagens motiverande citat och gör bilden.")
+    sq.add_argument("--nytt", action="store_true", help="Skriv ett nytt även om dagens redan finns.")
+
+    sub.add_parser("citat-publicera", parents=[common], help="Publicera dagens citat på Instagram.")
+
     sp = sub.add_parser("posta", parents=[common], help="Skriv bildtext och publicera nästa inlägg i kön.")
     sp.add_argument("--antal", type=int, default=1, help="Hur många inlägg från kön (standard 1).")
 
@@ -362,6 +482,8 @@ COMMANDS = {
     "status": cmd_status,
     "wod-skapa": cmd_wod_create,
     "wod-publicera": cmd_wod_publish,
+    "citat-skapa": cmd_quote_create,
+    "citat-publicera": cmd_quote_publish,
     "posta": cmd_post,
     "kommentarer": cmd_comments,
     "fornya-token": cmd_refresh,

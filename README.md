@@ -14,6 +14,10 @@ En AI-agent som driver ett Instagramkonto med ett nytt träningspass (WOD) varje
 
 Vill du hellre ha en enda bild per dag, se [Karusell eller en bild](#karusell-eller-en-bild).
 
+**Motiverande citat när du vill**
+
+När du startar flödet *Dagens citat* skriver coachen ett eget kort citat om träning och inställning. Bilden har omvänd färgskala, limegrön med svart text, så att citaten syns som ljusa rutor mellan de mörka passen i profilens rutnät. Ett eller ett par nyckelord står i en svart ruta. Citaten är alltid coachens egna ord och tillskrivs aldrig någon annan. Se [Citat](#citat).
+
 Alla pass skrivs från grunden av agenten. Den kopierar aldrig andras pass och använder aldrig ordet "CrossFit", som är ett skyddat varumärke.
 
 ---
@@ -101,6 +105,15 @@ Som standard publiceras en karusell med tre bilder. Vill du ha det gamla läget 
 
 Med `karusell` eller ingen inställning alls blir det tre bilder. Karusellen räknas som ett inlägg i Instagrams dygnsgräns.
 
+## Citat
+Flödet *Dagens citat* (`.github/workflows/dagens-citat.yml`) har inget schema. Du startar det själv under **Actions → Dagens citat → Run workflow**, och efter ett par minuter ligger citatet på Instagram. Det behöver inga nya hemligheter.
+
+- **Ett citat per dag:** startar du flödet igen samma dag händer ingenting, eftersom dagens citat redan är publicerat.
+- **Teman och hashtags:** ändra avsnittet *Citat* i `varumarke.md`.
+- **Prova utan att publicera:** kör `python main.py citat-skapa --torrkorning` på datorn.
+
+Citaten sparas i `citat.json` och bilderna som `bilder/citat-ÅÅÅÅ-MM-DD.jpg`. Coachen ser de senaste 30 citaten så att teman och formuleringar inte upprepas.
+
 ## Ändra publiceringstiden
 Öppna `.github/workflows/dagens-wod.yml` och ändra raden `cron: "17 5 * * *"`. Tiden anges i UTC, så 05:17 UTC är 07:17 svensk sommartid och 06:17 vintertid.
 
@@ -132,6 +145,7 @@ cp .env.example .env             # fyll i ANTHROPIC_API_KEY och IG_ACCESS_TOKEN
 
 python main.py status                        # kontrollera kopplingen
 python main.py wod-skapa --torrkorning       # dagens pass och bild, sparas inte
+python main.py citat-skapa --torrkorning     # dagens citat och bild, sparas inte
 python main.py wod-skapa                     # som ovan men du kan ge feedback och spara
 ```
 Bilderna hamnar i mappen `bilder`, som `2026-10-15-1.jpg` till `-3.jpg`. Med `--torrkorning` publiceras ingenting.
@@ -154,11 +168,13 @@ Vill du lägga upp egna bilder, till exempel från en träning, lägger du dem i
 |---|---|
 | `varumarke.md` | Coachens instruktioner: ton, veckoschema, utrustning, regler |
 | `wods.json` | Alla pass som skapats, nyast först. Coachen använder dem för att variera. |
-| `bilder/` | Bilderna som Instagram hämtar |
-| `main.py` | Kommandona: `status`, `wod-skapa`, `wod-publicera`, `kommentarer`, `posta`, `fornya-token` |
+| `citat.json` | Alla citat som skapats, nyast först |
+| `bilder/` | Bilderna som Instagram hämtar. Bara de senaste ligger kvar: när ett inlägg har publicerats tas äldre bilder bort. De finns kvar i git-historiken. |
+| `main.py` | Kommandona: `status`, `wod-skapa`, `wod-publicera`, `citat-skapa`, `citat-publicera`, `kommentarer`, `posta`, `fornya-token` |
 | `wod.py` | Coachen som skriver passen |
 | `bild.py` | Ritar bild 1, passet (och den enda bilden i läget `bild`) |
 | `karusell.py` | Ritar bild 2, planen, och bild 3, uppmaningen att dela, och sätter ihop karusellen |
+| `citat.py` | Coachen som skriver citaten, och citatbilden |
 | `agent.py` | Bildtexter för egna bilder och kommentarsagenten |
 | `instagram_api.py` | Anropen till Instagrams API |
 | `.github/workflows/` | De schemalagda flödena i GitHub Actions |
