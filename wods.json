@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-10-27",
+    "veckodag": "Tuesday",
+    "title": "Every Five Engine",
+    "format": "Intervals · 5 rounds, every 5:00 (25 min)",
+    "workout": [
+      "Every 5:00 for 5 rounds (25 min):",
+      "14/11 cal Assault/Echo bike",
+      "12/10 cal Row",
+      "20 Sit-ups",
+      "40 Single-unders (or 20 Double-unders)",
+      "Rest the remainder of the 5:00",
+      "Goal: finish each round in 3:30-4:00",
+      "If you're not done at 5:00, stop and restart the clock",
+      "Score = slowest round time",
+      "Note rounds missed (not finished within 5:00)"
+    ],
+    "scaling": [
+      "Cut the cals to 10/8 on bike and 9/7 on row.",
+      "Swap Double-unders for 40 Single-unders, or 30 sec of fast high knees.",
+      "Sit-ups to 15, or use a small abmat/anchored feet."
+    ],
+    "stimulus": "Repeatable aerobic work with 1-2 min of rest each round. Every round should look the same, so the last one is as clean as the first. Keep breathing under control and don't sprint the bike.",
+    "strategy": [
+      "Bike at a pace you could hold for 10 min, not 1.",
+      "Row with long, smooth strokes. Save your grip for the rope.",
+      "Break sit-ups early: 10-10 or 8-6-6. Never go to failure."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 14/11 cal bike, 12/10 cal row, 20 sit-ups, 40 singles (or 20 DUs)."
+      },
+      {
+        "name": "Intermediate",
+        "text": "12/9 cal bike, 10/8 cal row, 20 sit-ups, 40 single-unders."
+      },
+      {
+        "name": "Beginner",
+        "text": "10/8 cal bike, 8/6 cal row, 15 sit-ups, 30 single-unders. Aim for 3 rounds with steady pacing."
+      }
+    ],
+    "focus": [
+      "engine",
+      "monostructural",
+      "aerobic base",
+      "core"
+    ],
+    "caption": "Five rounds. Same pace every time. That's the whole game today. 🔥\n\nEngine day: every 5:00 for 5 rounds (25 min)\n\n14/11 cal Assault/Echo bike\n12/10 cal Row\n20 Sit-ups\n40 Single-unders (or 20 Double-unders)\n\nRest whatever is left of the 5:00. If you're not done at 5:00, stop and restart the clock. Aim to finish each round in 3:30-4:00.\n\nScore = slowest round time. Note any rounds you missed.\n\nScaled options:\n- Bike 10/8 cal, row 9/7 cal\n- Single-unders or high knees instead of Double-unders\n- Sit-ups to 15\n\nCoach note: this is repeatable aerobic work. Each round should look the same, so the last one is as clean as the first. Bike at a pace you could hold for 10 min, not 1. Row long and smooth. Break sit-ups early.\n\nInjured or unsure? Scale it and talk to a coach or doctor.\n\nPost your slowest round and rounds missed in the comments. ⏱️\n\nSend this to a training partner or tag them in.\n\n#wod #workoutoftheday #functionalfitness #conditioning #metcon",
+    "bilder": [
+      "bilder/2026-10-27-1.jpg",
+      "bilder/2026-10-27-2.jpg",
+      "bilder/2026-10-27-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-26",
     "veckodag": "Monday",
     "title": "Press Heavy, Run Light",
