@@ -1,5 +1,60 @@
 [
   {
+    "datum": "2026-10-28",
+    "veckodag": "Wednesday",
+    "title": "Pull Strong, Jump High",
+    "format": "Skill EMOM 10 + AMRAP 12",
+    "workout": [
+      "A. Skill · EMOM 10 min",
+      "Odd: 3 Strict pull-ups, 3-sec lowering",
+      "Even: 5/side Box pistols (to a box)",
+      "Rest 3 min, then:",
+      "B. AMRAP 12 min",
+      "6 Chest-to-bar pull-ups",
+      "12 Wall balls (9/6 kg · 20/14 lb)",
+      "8 Box jump-overs (60/50 cm · 24/20 in)",
+      "Score A = total quality reps, or the hardest variation you hit",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "Pull-ups: use jumping pull-ups or ring rows with a slow lowering. Metcon: regular pull-ups or 8 ring rows.",
+      "Pistols: sit to a higher box or hold a post or rings. Jump-overs: step up and down, or use a lower box."
+    ],
+    "stimulus": "Part A is about clean, controlled pulling and single-leg strength, so keep every rep crisp. Part B is a steady, moderate-to-hard grind. Aim for unbroken pull-up sets early and don't let the wall balls pile up.",
+    "strategy": [
+      "Part A: stop each set 1 rep before form breaks.",
+      "Part B: split wall balls 6-6 from round one.",
+      "Step down from the box and keep a smooth, even rhythm."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: strict pull-ups, box pistols, chest-to-bar, 60/50 cm box jump-overs."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Pull-ups (kipping ok) in B, pistols to a 50 cm box, 9/6 kg wall balls, 50/40 cm box."
+      },
+      {
+        "name": "Beginner",
+        "text": "Ring rows (feet elevated), box squats to a high box, 6/4 kg wall balls, step-ups to a 40 cm box."
+      }
+    ],
+    "focus": [
+      "gymnastics",
+      "pull",
+      "legs",
+      "engine"
+    ],
+    "caption": "Wednesday is skill day. Earn your pull-ups, then keep moving. 💪\n\nA. Skill · EMOM 10 min\nOdd: 3 Strict pull-ups, 3-sec lowering\nEven: 5/side Box pistols (to a box)\n\nRest 3 min, then:\n\nB. AMRAP 12 min\n6 Chest-to-bar pull-ups\n12 Wall balls (9/6 kg · 20/14 lb)\n8 Box jump-overs (60/50 cm · 24/20 in)\n\nScore A = total quality reps, or the hardest variation you hit\nScore B = rounds + reps\n\nScaling:\n- Pull-ups: jumping pull-ups or ring rows with a slow lowering. In B, regular pull-ups or 8 ring rows.\n- Pistols: sit to a higher box or hold a post or rings.\n- Jump-overs: step up and down, or use a lower box.\n\nCoach note: Part A is about control. Stop each set 1 rep before form breaks. Part B is a steady grind. Split the wall balls early and keep a smooth rhythm. ⏱️\n\nNew to any of these, or have an injury? Scale it and talk to a coach or doctor.\n\nPost your skill score and your rounds + reps in the comments. Let's see them!\n\nSend this workout to a training partner or tag them below.\n\n#wod #workoutoftheday #functionalfitness #metcon #amrap",
+    "bilder": [
+      "bilder/2026-10-28-1.jpg",
+      "bilder/2026-10-28-2.jpg",
+      "bilder/2026-10-28-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-27",
     "veckodag": "Tuesday",
     "title": "Every Five Engine",
