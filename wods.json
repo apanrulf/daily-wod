@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-10-29",
+    "veckodag": "Thursday",
+    "title": "Clean Lines, Quick Hands",
+    "format": "EMOM 12 (every 2:00) + For Time · 9 min cap",
+    "workout": [
+      "A. Every 2:00 x 6 sets (12 min)",
+      "1 Squat clean + 2 Split jerks",
+      "Build to a heavy but crisp complex",
+      "Start ~40/30 kg · 90/65 lb",
+      "Rest 3 min, then:",
+      "B. 3 Rounds For Time (9 min cap)",
+      "12/9 cal Row",
+      "10 Alt. DB clean & jerks (22.5/15 kg · 50/35 lb)",
+      "40 Single-unders (or 20 Double-unders)",
+      "Score A = top complex load",
+      "Score B = total time (or reps at the cap)"
+    ],
+    "scaling": [
+      "A: Power clean + push jerk, or hang clean + 2 push presses, at a lighter load.",
+      "B: DB 15/10 kg · 35/22 lb, row 10/7 cal, 30 single-unders.",
+      "Unsure about the lifts? Drop the load and film your bar path or ask a coach."
+    ],
+    "stimulus": "Part A is about technique under rising load: fast elbows in the clean, a stable dip and drive in the jerk. Part B is short and sharp, so move fast but keep the DB reps tidy.",
+    "strategy": [
+      "A: add weight only when every rep of the last set was fast and clean.",
+      "B: row hard but smooth. Save your legs for the DB clean & jerks.",
+      "Break the DB reps early (5-5) and keep rope turnover steady."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Squat clean + 2 split jerks, DB 22.5/15 kg, single-unders or double-unders."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Power clean + 2 split or push jerks, ~30/20 kg start. DB 17.5/12.5 kg, 40 single-unders."
+      },
+      {
+        "name": "Beginner",
+        "text": "Hang power clean + push press, light bar. DB 12.5/10 kg, row 10/7 cal, 30 single-unders."
+      }
+    ],
+    "focus": [
+      "olympic lifting",
+      "clean and jerk",
+      "engine",
+      "shoulders"
+    ],
+    "caption": "Thursday = barbell day. Make every rep look good first, then make it fast. 🔥\n\nA. Every 2:00 x 6 sets (12 min)\n1 Squat clean + 2 Split jerks\nBuild to a heavy but crisp complex. Start ~40/30 kg · 90/65 lb.\n\nRest 3 min, then:\n\nB. 3 Rounds For Time (9 min cap)\n12/9 cal Row\n10 Alt. DB clean & jerks (22.5/15 kg · 50/35 lb)\n40 Single-unders (or 20 Double-unders)\n\nScaling:\nA: Power clean + push jerk, or hang clean + 2 push presses, lighter load.\nB: DB 15/10 kg · 35/22 lb, row 10/7 cal, 30 single-unders.\nInjured or unsure? Scale it and talk to a coach or doctor.\n\nCoach note: Part A is technique under rising load. Add weight only when the last set was fast and clean. Part B is short and sharp. Row hard but smooth and break the DB reps early.\n\nPost your top complex load and your time in the comments 💪\n\nSend this to a training partner or tag them.\n\n#wod #functionalfitness #metcon #fortime #strengthtraining",
+    "bilder": [
+      "bilder/2026-10-29-1.jpg",
+      "bilder/2026-10-29-2.jpg",
+      "bilder/2026-10-29-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-28",
     "veckodag": "Wednesday",
     "title": "Pull Strong, Jump High",
