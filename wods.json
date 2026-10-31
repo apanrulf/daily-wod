@@ -1,5 +1,63 @@
 [
   {
+    "datum": "2026-10-31",
+    "veckodag": "Saturday",
+    "title": "Chip Away Together",
+    "format": "Partner Chipper · 32 min cap",
+    "workout": [
+      "Teams of 2 · one works, one rests",
+      "Chipper For Time:",
+      "60/48 cal Assault/Echo bike",
+      "40 Deadlifts (70/50 kg · 155/110 lb)",
+      "40 Hand-release push-ups",
+      "30 Pull-ups",
+      "50/40 cal Row",
+      "30 Toes-to-bar",
+      "50 Wall balls (9/6 kg · 20/14 lb)",
+      "Split reps any way you like",
+      "Time cap: 32 min",
+      "Score = team time (or reps at the cap)"
+    ],
+    "scaling": [
+      "Pull-ups to ring rows or banded pull-ups; T2B to hanging knee raises or V-ups",
+      "Deadlifts to 50/35 kg · 110/75 lb; push-ups from knees or hands on a box",
+      "Cut the bike and row to 45/36 cal and 40/32 cal, and the wall balls to 40"
+    ],
+    "stimulus": "A long chipper that is steady, not sprinted. Aim for 25-32 minutes of smooth work with short, planned swaps. Keep the sets that fry your grip or shoulders in smaller chunks.",
+    "strategy": [
+      "Swap early on pull-ups and T2B: sets of 5-6, before failure.",
+      "Hold a steady, conversational pace on the bike and row.",
+      "Plan the wall balls: 10 reps each, swap, repeat."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Pull-ups and T2B strict or kipping, full range of motion."
+      },
+      {
+        "name": "Intermediate",
+        "text": "DL 60/40 kg · 135/90 lb, banded pull-ups, 20 T2B + 10 knee raises."
+      },
+      {
+        "name": "Beginner",
+        "text": "DL 40/30 kg · 90/65 lb, ring rows, knee raises, 40 wall balls, cals -25%."
+      }
+    ],
+    "focus": [
+      "engine",
+      "pull",
+      "posterior chain",
+      "core"
+    ],
+    "caption": "Seven movements. Two athletes. One long chipper. Grab a partner and chip it down together. 🔥\n\nPartner Chipper · For Time · 32 min cap\nTeams of 2, one works while the other rests. Split reps any way you like.\n\n60/48 cal Assault/Echo bike\n40 Deadlifts (70/50 kg · 155/110 lb)\n40 Hand-release push-ups\n30 Pull-ups\n50/40 cal Row\n30 Toes-to-bar\n50 Wall balls (9/6 kg · 20/14 lb)\n\nScaled options:\n- Pull-ups to ring rows or banded pull-ups; T2B to knee raises or V-ups\n- Deadlifts to 50/35 kg · 110/75 lb; push-ups from knees or hands on a box\n- Cut the bike and row to 45/36 cal and 40/32 cal, and the wall balls to 40\n\nCoach note: This one is steady, not a sprint. Aim for smooth work and planned swaps. Break pull-ups and T2B early, before your grip is gone. Injured or unsure? Scale it and talk to a coach or doctor.\n\nPost your team time (or reps at the cap) in the comments! 💪\n\nSend this workout to your training partner or tag them below.\n\n#wod #workoutoftheday #functionalfitness #fortime #conditioning",
+    "bilder": [
+      "bilder/2026-10-31-1.jpg",
+      "bilder/2026-10-31-2.jpg",
+      "bilder/2026-10-31-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-30",
     "veckodag": "Friday",
     "title": "Run, Rack, Rise",
