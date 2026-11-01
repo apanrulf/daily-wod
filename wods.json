@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-01",
+    "veckodag": "Sunday",
+    "title": "Easy Does It Sunday",
+    "format": "Active Recovery · 40 min easy",
+    "workout": [
+      "A. 20 min easy aerobic, Zone 1-2",
+      "10 min Bike, 5 min Row, 5 min brisk walk",
+      "Nose breathing, full sentences",
+      "B. 2 Rounds, no rush:",
+      "8/side Ankle rocks to wall",
+      "6/side Open books (thoracic rotation)",
+      "8/side KB halos (8/6 kg · 18/12 lb)",
+      "C. Hold and breathe:",
+      "60 sec/side Half-kneeling hip flexor stretch",
+      "60 sec Child's pose, arms reaching long",
+      "3 min on your back, inhale 4 sec / exhale 6 sec"
+    ],
+    "scaling": [
+      "No KB? Do halos with a light plate or skip the weight.",
+      "Short on time? Do A for 15 min and one round of B.",
+      "Anything feels sharp or painful? Skip it and talk to a coach or doctor."
+    ],
+    "stimulus": "This is a recovery day with no intensity. Keep your heart rate low and move through easy ranges to help your body reset after a hard week.",
+    "strategy": [
+      "If you can't talk in full sentences, slow down.",
+      "Move slowly and stay in ranges that feel good.",
+      "Breathe out longer than you breathe in during the holds."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Keep it truly easy, Zone 1-2 only."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Halos with a 4 kg · 9 lb KB or plate. Pick one cardio machine for all 20 min."
+      },
+      {
+        "name": "Beginner",
+        "text": "15 min easy walk or bike, bodyweight halos, one round of B, 2 min breathing."
+      }
+    ],
+    "focus": [
+      "recovery",
+      "mobility",
+      "aerobic base",
+      "hips and ankles"
+    ],
+    "caption": "Sunday is for recovering well, so you can come back stronger. 💪\n\nEASY DOES IT SUNDAY\nActive Recovery · 40 min easy\n\nA. 20 min easy aerobic, Zone 1-2\n10 min Bike, 5 min Row, 5 min brisk walk\nNose breathing, full sentences\n\nB. 2 Rounds, no rush:\n8/side Ankle rocks to wall\n6/side Open books (thoracic rotation)\n8/side KB halos (8/6 kg · 18/12 lb)\n\nC. Hold and breathe:\n60 sec/side Half-kneeling hip flexor stretch\n60 sec Child's pose, arms reaching long\n3 min on your back, inhale 4 sec / exhale 6 sec\n\nScaled options:\n- No KB? Use a light plate or no weight.\n- Short on time? 15 min of A and one round of B.\n- Anything feels sharp or painful? Skip it and talk to a coach or doctor.\n\nCoach note: No intensity today. Keep your heart rate low, move slowly and breathe out longer than you breathe in. Easy work now makes next week's hard sessions better.\n\nHow did you spend your recovery day? Drop it in the comments. ⏱️\n\nSend this to a training partner or tag them, and recover together.\n\n#wod #workoutoftheday #functionalfitness",
+    "bilder": [
+      "bilder/2026-11-01-1.jpg",
+      "bilder/2026-11-01-2.jpg",
+      "bilder/2026-11-01-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-10-31",
     "veckodag": "Saturday",
     "title": "Chip Away Together",
