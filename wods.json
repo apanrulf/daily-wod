@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-02",
+    "veckodag": "Monday",
+    "title": "Row Heavy, Thrust Fast",
+    "format": "Strength + AMRAP 8",
+    "workout": [
+      "A. Pendlay row · 18 min",
+      "Build to a heavy set of 5 (RPE 8-9)",
+      "Then 3 x 6 at ~75% of your heavy 5",
+      "Rest 90 sec between back-off sets",
+      "Rest 3 min, then:",
+      "B. AMRAP 8 min",
+      "6 Thrusters (43/30 kg · 95/65 lb)",
+      "10/8 cal Assault/Echo bike",
+      "8 Sit-ups",
+      "Score A = heavy 5 load",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "Row: use a lighter load, or chest-supported DB rows (2x 20/12.5 kg · 2x 45/30 lb).",
+      "Thrusters: 30/20 kg · 65/45 lb, or DB thrusters (2x 12.5/7.5 kg · 2x 30/17 lb).",
+      "Bike: drop to 8/6 cal, or swap in 12/9 cal Row."
+    ],
+    "stimulus": "Part A is a heavy, strict pull from the floor. Every rep is a dead stop with a flat back and a fast, clean pull. Part B is short and fast. Aim for steady rounds with no long rests, and keep the thrusters in 2-3 unbroken sets.",
+    "strategy": [
+      "Row: reset your back flat on every rep. No bouncing off the floor.",
+      "Build in 3-4 jumps so your heavy 5 is a true RPE 8-9.",
+      "Thrusters: 3+3 from round one. Ride the bike hard but controlled."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: heavy 5-rep Pendlay row, thrusters 43/30 kg · 95/65 lb, full bike calories."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Row at RPE 7-8. Thrusters 35/25 kg · 75/55 lb. Bike 8 cal (men) / 6 cal (women)."
+      },
+      {
+        "name": "Beginner",
+        "text": "Light Pendlay or DB rows. Thrusters 25/15 kg · 55/35 lb x 4. Bike 6 cal or row 8 cal."
+      }
+    ],
+    "focus": [
+      "pull",
+      "back",
+      "engine",
+      "legs"
+    ],
+    "caption": "Heavy pulls, fast legs. Today starts with a barbell row and finishes with 8 minutes of thrusters. 💪\n\nA. Pendlay row · 18 min\nBuild to a heavy set of 5 (RPE 8-9)\nThen 3 x 6 at ~75% of your heavy 5\nRest 90 sec between back-off sets\n\nRest 3 min, then:\n\nB. AMRAP 8 min\n6 Thrusters (43/30 kg · 95/65 lb)\n10/8 cal Assault/Echo bike\n8 Sit-ups\n\nScaling:\n- Row: lighter load, or chest-supported DB rows (2x 20/12.5 kg · 2x 45/30 lb)\n- Thrusters: 30/20 kg · 65/45 lb, or DB thrusters\n- Bike: 8/6 cal, or 12/9 cal Row\n\nCoach note: Part A is a dead-stop row from the floor with a flat back on every rep. Part B is short and fast. Keep the thrusters in 2-3 sets and keep moving. If you have an injury or you're unsure about a movement, scale it and talk to a coach or doctor.\n\nScore A = heavy 5 load. Score B = rounds + reps. Drop your numbers in the comments ⏱️\n\nSend this to your training partner or tag them and pick a time to train.\n\n#wod #workoutoftheday #functionalfitness #strengthtraining #metcon",
+    "bilder": [
+      "bilder/2026-11-02-1.jpg",
+      "bilder/2026-11-02-2.jpg",
+      "bilder/2026-11-02-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-01",
     "veckodag": "Sunday",
     "title": "Easy Does It Sunday",
