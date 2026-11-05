@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-05",
+    "veckodag": "Thursday",
+    "title": "Snatch Balance, Fast Bike",
+    "format": "Every 2:00 x 5 + For Time · 8 min cap",
+    "workout": [
+      "A. Every 2:00 x 5 sets (10 min)",
+      "2 Hang power snatches + 1 Snatch balance",
+      "Build to a heavy but crisp complex",
+      "Start ~30/20 kg · 65/45 lb",
+      "Rest 3 min, then:",
+      "B. 3 Rounds For Time (8 min cap)",
+      "12/9 cal Assault/Echo bike",
+      "10 Goblet squats (24/16 kg · 53/35 lb)",
+      "8 Burpees",
+      "Score A = top complex load",
+      "Score B = total time (or reps at the cap)"
+    ],
+    "scaling": [
+      "Swap snatch balance for an overhead squat, or use a PVC pipe or empty bar for technique.",
+      "Metcon: 8/6 cal bike, 8 goblet squats with a lighter bell, 6 step-back burpees.",
+      "Stop the complex if the bar path breaks down. Crisp reps beat heavy reps."
+    ],
+    "stimulus": "Part A is about speed under the bar and a stable catch overhead. Keep the load moderate and the reps sharp. Part B is a short, fast piece. Go hard on the bike, move steadily through the squats, and keep the burpees smooth.",
+    "strategy": [
+      "Add weight only when the last set felt fast and clean.",
+      "Bike hard but stay in control, so the squats don't fall apart.",
+      "Break goblet squats 5-5 and keep the burpees non-stop."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Heavy but crisp complex, bike, goblet squats and burpees unbroken."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Complex at 25/15 kg · 55/35 lb, overhead squat instead of snatch balance. Bike 10/8 cal, goblet squats 16/12 kg · 35/26 lb."
+      },
+      {
+        "name": "Beginner",
+        "text": "Empty bar or PVC, 2 hang power snatches + 1 overhead squat. Bike 8/6 cal, 8 air squats, 6 step-back burpees."
+      }
+    ],
+    "focus": [
+      "olympic lifting",
+      "snatch",
+      "engine",
+      "legs"
+    ],
+    "caption": "Thursday means barbell work. Fast bar, clean catch, then a short sharp finisher. 💪\n\nA. Every 2:00 x 5 sets (10 min)\n2 Hang power snatches + 1 Snatch balance\nBuild to a heavy but crisp complex\nStart ~30/20 kg · 65/45 lb\n\nRest 3 min, then:\n\nB. 3 Rounds For Time (8 min cap)\n12/9 cal Assault/Echo bike\n10 Goblet squats (24/16 kg · 53/35 lb)\n8 Burpees\n\nScore A = top complex load\nScore B = total time (or reps at the cap)\n\nScaling:\n- Swap snatch balance for an overhead squat, or use PVC or an empty bar.\n- Metcon: 8/6 cal bike, 8 goblet squats with a lighter bell, 6 step-back burpees.\n\nCoach note: Keep the snatch work fast and crisp, and add load only when the last set felt clean. In the metcon, go hard on the bike, keep the squats steady and the burpees smooth. If you have an injury or are unsure about a movement, scale it and talk to a coach or doctor.\n\nPost your top complex load and your time in the comments. ⏱️\n\nSend this to your training partner or tag them in.\n\n#wod #workoutoftheday #functionalfitness #metcon #fortime",
+    "bilder": [
+      "bilder/2026-11-05-1.jpg",
+      "bilder/2026-11-05-2.jpg",
+      "bilder/2026-11-05-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-04",
     "veckodag": "Wednesday",
     "title": "Rings, Rope and Lunges",
