@@ -1,5 +1,57 @@
 [
   {
+    "datum": "2026-11-06",
+    "veckodag": "Friday",
+    "title": "Row, Hop, Hang",
+    "format": "For Time · 14 min cap",
+    "workout": [
+      "5 Rounds For Time:",
+      "14/11 cal Row",
+      "10 Box jump-overs (60/50 cm · 24/20 in)",
+      "10 Ring rows (feet elevated)",
+      "Time cap: 14 min",
+      "Score = total time (or reps completed at the cap)"
+    ],
+    "scaling": [
+      "Row 10/8 cal, step over the box instead of jumping",
+      "Ring rows with feet on the floor and a more upright body",
+      "Drop to 4 rounds if you are new to this volume"
+    ],
+    "stimulus": "A steady, aerobic-leaning couplet with a bit of leg snap and a pulling finish. Aim for rounds of 2:15-2:45 and keep every round within 10 sec of the last.",
+    "strategy": [
+      "Row at 80%, not 100%. You have 5 rounds to get through.",
+      "Step down from the box and keep your landings soft.",
+      "Do the ring rows unbroken, or break once at 6-4."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 14/11 cal row, 60/50 cm box jump-overs, feet-elevated ring rows."
+      },
+      {
+        "name": "Intermediate",
+        "text": "12/9 cal Row, 50/40 cm box (step down), ring rows with feet elevated lower."
+      },
+      {
+        "name": "Beginner",
+        "text": "4 rounds: 10/8 cal Row, 8 step-overs (50/40 cm), 8 ring rows feet on the floor."
+      }
+    ],
+    "focus": [
+      "engine",
+      "pull",
+      "legs",
+      "monostructural"
+    ],
+    "caption": "Friday means fast and focused. Five rounds, one steady pace. 🔥\n\nROW, HOP, HANG\n5 Rounds For Time:\n14/11 cal Row\n10 Box jump-overs (60/50 cm · 24/20 in)\n10 Ring rows (feet elevated)\nTime cap: 14 min\n\nScaled options:\n- Row 10/8 cal, step over the box instead of jumping\n- Ring rows with feet on the floor, more upright body\n- Drop to 4 rounds if the volume is new to you\n\nCoach note: This is an aerobic-leaning couplet with a pulling finish. Aim for rounds of 2:15-2:45 and keep every round within 10 sec of the last. Row at 80%, step down from the box, and break the ring rows early if needed.\n\nIf you have an injury or you're unsure about a movement, scale it and talk to a coach or doctor.\n\nPost your time (or reps at the cap) in the comments. 💪\n\nSend this one to your training partner or tag them below.\n\n#wod #workoutoftheday #functionalfitness #fortime #conditioning",
+    "bilder": [
+      "bilder/2026-11-06-1.jpg",
+      "bilder/2026-11-06-2.jpg",
+      "bilder/2026-11-06-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-05",
     "veckodag": "Thursday",
     "title": "Snatch Balance, Fast Bike",
