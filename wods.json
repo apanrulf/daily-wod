@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-11-07",
+    "veckodag": "Saturday",
+    "title": "Press, Pedal, Run Split",
+    "format": "Partner · 5 Rounds For Time · 34 min cap",
+    "workout": [
+      "Teams of 2 · one works, one rests",
+      "5 Rounds For Time (team):",
+      "20/15 cal Assault/Echo bike",
+      "16 Push presses (40/30 kg · 85/65 lb)",
+      "24 Sit-ups",
+      "400 m Run (split any way you like)",
+      "Split reps any way you like",
+      "Only one partner works at a time",
+      "Time cap: 34 min",
+      "Score = team time (or rounds at the cap)"
+    ],
+    "scaling": [
+      "Lighter push press (30/20 kg · 65/45 lb) or DB push press (2x 12.5/7.5 kg · 2x 25/15 lb)",
+      "Cut the run to 200 m, or swap for 15/12 cal Row",
+      "Drop to 4 rounds if the pace falls apart"
+    ],
+    "stimulus": "A steady team grind: you move in short bursts and recover on the swap, so keep the pace honest. Aim for roughly 5-6 min per team round and keep your shoulders fresh for the presses.",
+    "strategy": [
+      "Split the bike evenly. Don't redline in round 1.",
+      "Break push presses early: sets of 4-6, then swap.",
+      "Run 200 m each and swap fast at the line."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 40/30 kg push press, full 400 m run each round."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Push press 30/20 kg (65/45 lb). Run 400 m. Bike 16/12 cal."
+      },
+      {
+        "name": "Beginner",
+        "text": "DB push press 2x 10/5 kg (2x 22/12 lb), run 200 m, bike 12/10 cal, 4 rounds."
+      }
+    ],
+    "focus": [
+      "engine",
+      "shoulders",
+      "push",
+      "running"
+    ],
+    "caption": "Saturday team grind. Grab a partner and keep the pace even. 🔥\n\nPress, Pedal, Run Split\nTeams of 2 · one works, one rests\n5 Rounds For Time (team):\n20/15 cal Assault/Echo bike\n16 Push presses (40/30 kg · 85/65 lb)\n24 Sit-ups\n400 m Run (split any way you like)\n\nSplit reps any way you like. Only one partner works at a time.\nTime cap: 34 min\nScore = team time (or rounds at the cap)\n\nScaling:\n- Lighter push press (30/20 kg · 65/45 lb) or DB push press\n- Cut the run to 200 m or swap for 15/12 cal Row\n- Drop to 4 rounds if needed\n\nCoach note: Short bursts, fast swaps. Aim for roughly 5-6 min per team round and keep the bike controlled so your shoulders have something left for the presses. Break the presses early. If you're injured or unsure, scale and talk to a coach or doctor.\n\nPost your team time and scaling in the comments. 💪\n\nSend this to your training partner or tag them.\n\n#wod #workoutoftheday #functionalfitness #fortime #conditioning",
+    "bilder": [
+      "bilder/2026-11-07-1.jpg",
+      "bilder/2026-11-07-2.jpg",
+      "bilder/2026-11-07-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-06",
     "veckodag": "Friday",
     "title": "Row, Hop, Hang",
