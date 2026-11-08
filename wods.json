@@ -1,5 +1,63 @@
 [
   {
+    "datum": "2026-11-08",
+    "veckodag": "Sunday",
+    "title": "Breathe Easy Sunday",
+    "format": "Active Recovery · 40 min easy",
+    "workout": [
+      "A. 20 min easy aerobic, Zone 1-2",
+      "12 min Easy jog or walk, then 8 min Bike",
+      "Nose breathing, full sentences",
+      "B. 2 Rounds, no rush:",
+      "8/side Thread the needle",
+      "6/side Cossack squat shifts, bodyweight",
+      "8 Bird dogs, 3-sec hold",
+      "C. Hold and breathe:",
+      "60 sec/side Figure-four glute stretch",
+      "60 sec/side Doorway pec stretch",
+      "2 min Hamstring stretch on back, jump rope as strap",
+      "3 min Box breathing (4-4-4-4)"
+    ],
+    "scaling": [
+      "Swap the jog for a brisk walk or an easy row.",
+      "Shorten the range on Cossack shifts and stay where it feels good.",
+      "Anything feels off or painful? Skip it and talk to a coach or doctor."
+    ],
+    "stimulus": "This is a recovery day. Keep every minute conversational and let your heart rate settle. You should finish feeling better than when you started.",
+    "strategy": [
+      "If you can't talk in full sentences, slow down.",
+      "Move slowly through part B. Smooth beats deep.",
+      "Breathe out longer than you breathe in on every hold."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Easy is the standard, so no intensity today."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Walk instead of jog for 12 min. Hold each stretch 45 sec."
+      },
+      {
+        "name": "Beginner",
+        "text": "20 min walk or easy bike. One round of part B, then part C."
+      }
+    ],
+    "focus": [
+      "recovery",
+      "mobility",
+      "aerobic base",
+      "hips and shoulders"
+    ],
+    "caption": "Rest is part of the plan. Today we go easy. 💪\n\nACTIVE RECOVERY · 40 min easy\n\nA. 20 min easy aerobic, Zone 1-2\n12 min Easy jog or walk, then 8 min Bike\nNose breathing, full sentences\n\nB. 2 Rounds, no rush:\n8/side Thread the needle\n6/side Cossack squat shifts, bodyweight\n8 Bird dogs, 3-sec hold\n\nC. Hold and breathe:\n60 sec/side Figure-four glute stretch\n60 sec/side Doorway pec stretch\n2 min Hamstring stretch on back, jump rope as strap\n3 min Box breathing (4-4-4-4)\n\nScaled options:\n- Swap the jog for a brisk walk or an easy row.\n- Shorten the range on Cossack shifts and stay where it feels good.\n- Anything feels off or painful? Skip it and talk to a coach or doctor.\n\nCoach note: This is a recovery day. Keep every minute conversational and let your heart rate settle. You should finish feeling better than when you started.\n\nHow did it feel? Drop your minutes and how you feel in the comments. ⏱️\n\nSend this to your training partner and recover together.\n\n#wod #workoutoftheday #functionalfitness #conditioning",
+    "bilder": [
+      "bilder/2026-11-08-1.jpg",
+      "bilder/2026-11-08-2.jpg",
+      "bilder/2026-11-08-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-07",
     "veckodag": "Saturday",
     "title": "Press, Pedal, Run Split",
