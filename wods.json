@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-09",
+    "veckodag": "Monday",
+    "title": "Heavy Three, Rope Rush",
+    "format": "Strength + AMRAP 8",
+    "workout": [
+      "A. Deadlift · 18 min",
+      "Build to a heavy set of 3 (RPE 8-9)",
+      "Then 3 x 5 at ~80% of your heavy 3",
+      "Rest 90 sec between back-off sets",
+      "Rest 3 min, then:",
+      "B. AMRAP 8 min",
+      "6 Pull-ups",
+      "10 Hand-release push-ups",
+      "40 Single-unders (or 20 Double-unders)",
+      "Score A = heavy 3 load",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "Deadlift: keep the heavy 3 at RPE 7-8 and stop if your back position slips.",
+      "Pull-ups: banded or ring rows (feet elevated). Push-ups: from an incline or knees.",
+      "Rope: 60 Single-unders, or 40 fast marching jumps with no rope."
+    ],
+    "stimulus": "Strength first: a heavy, well-braced triple, then back-off fives with crisp reps. The metcon is an upper-body and rope piece that stays light on the legs and lower back. Move steadily and keep your sets unbroken as long as you can.",
+    "strategy": [
+      "Build in 3-4 jumps. Save your best pulls for the top set.",
+      "Reset your brace on every deadlift rep. No bouncing.",
+      "Metcon: break pull-ups early (3-3) and keep the rope smooth."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: heavy deadlift triple, strict-ish pull-ups, Single-unders or Double-unders."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Heavy 3 at RPE 8. Banded pull-ups, 60 Single-unders, standard hand-release push-ups."
+      },
+      {
+        "name": "Beginner",
+        "text": "Moderate deadlift sets of 5 at RPE 7. 6 Ring rows, 8 Incline push-ups, 40 Single-unders."
+      }
+    ],
+    "focus": [
+      "posterior chain",
+      "pull",
+      "push",
+      "engine"
+    ],
+    "caption": "Monday means heavy. Pick up the bar and build. 💪\n\nA. Deadlift · 18 min\nBuild to a heavy set of 3 (RPE 8-9)\nThen 3 x 5 at ~80% of your heavy 3\nRest 90 sec between back-off sets\n\nRest 3 min, then:\n\nB. AMRAP 8 min\n6 Pull-ups\n10 Hand-release push-ups\n40 Single-unders (or 20 Double-unders)\n\nScaled options:\n- Deadlift: keep the heavy 3 at RPE 7-8 and stop if your back position slips.\n- Pull-ups: banded or ring rows (feet elevated). Push-ups: from an incline or knees.\n- Rope: 60 Single-unders, or 40 fast marching jumps with no rope.\n\nCoach note: Strength first. Make the heavy triple tight and well braced, then keep the back-off fives crisp. The metcon is upper body plus rope, so it stays light on the legs and lower back. Keep moving and keep your sets unbroken as long as you can. If you have an injury or you're unsure about a movement, scale it and talk to a coach or doctor. ⏱️\n\nPost your heavy 3 and your rounds + reps in the comments. Let's see those numbers!\n\nSend this to your training partner or tag them.\n\n#wod #workoutoftheday #functionalfitness #strengthtraining #metcon",
+    "bilder": [
+      "bilder/2026-11-09-1.jpg",
+      "bilder/2026-11-09-2.jpg",
+      "bilder/2026-11-09-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-08",
     "veckodag": "Sunday",
     "title": "Breathe Easy Sunday",
