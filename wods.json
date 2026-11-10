@@ -1,5 +1,60 @@
 [
   {
+    "datum": "2026-11-10",
+    "veckodag": "Tuesday",
+    "title": "Run, Row, Ride, Throw",
+    "format": "4 Rounds For Time · 30 min cap",
+    "workout": [
+      "4 Rounds For Time:",
+      "400 m Run",
+      "500/400 m Row",
+      "20/15 cal Assault/Echo bike",
+      "15 Wall balls (9/6 kg · 20/14 lb)",
+      "Rest 1:00 after round 2",
+      "Target: 6:00-6:45 per round",
+      "Time cap: 30 min",
+      "Score = total time (or reps at the cap)"
+    ],
+    "scaling": [
+      "Run 300 m, or row 400/300 m. Bike 15/12 cal.",
+      "Wall balls 6/4 kg (14/9 lb), to a lower target.",
+      "Cut to 3 rounds and keep the 1:00 rest."
+    ],
+    "stimulus": "A steady, aerobic grind with four different stations, so nothing gets stuck in one spot. Hold a pace you could keep for 30 minutes, and use the rest to reset, not to recover fully.",
+    "strategy": [
+      "Run at a pace where you can still breathe through your nose.",
+      "Row smooth: long strokes, not frantic ones.",
+      "Break wall balls early: 8-7, then move before you fade."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 400 m run, 500/400 m row, 20/15 cal bike, 15 wall balls."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Run 400 m, row 400/300 m, bike 15/12 cal, wall balls 7/5 kg (15/11 lb)."
+      },
+      {
+        "name": "Beginner",
+        "text": "3 rounds: run 300 m, row 300/250 m, bike 12/10 cal, 12 wall balls 6/4 kg."
+      }
+    ],
+    "focus": [
+      "engine",
+      "monostructural",
+      "running",
+      "legs"
+    ],
+    "caption": "Four stations. One steady engine. Find your pace and hold it. 💪\n\nTuesday Engine: Run, Row, Ride, Throw\n4 Rounds For Time (30 min cap):\n400 m Run\n500/400 m Row\n20/15 cal Assault/Echo bike\n15 Wall balls (9/6 kg · 20/14 lb)\nRest 1:00 after round 2.\n\nScaled options:\n- Run 300 m, or row 400/300 m, bike 15/12 cal\n- Wall balls 6/4 kg (14/9 lb)\n- Cut to 3 rounds and keep the 1:00 rest\n\nCoach note: This is an aerobic grind, so aim for 6:00-6:45 per round. Run at a pace where you can still breathe through your nose, row with long, smooth strokes, and break the wall balls early. Use the rest to reset, not to recover fully.\n\nHurt or unsure? Scale it and talk to a coach or doctor.\n\nPost your time (or reps at the cap) in the comments ⏱️\n\nSend this to your training partner or tag them in.\n\n#wod #workoutoftheday #conditioning #fortime #functionalfitness",
+    "bilder": [
+      "bilder/2026-11-10-1.jpg",
+      "bilder/2026-11-10-2.jpg",
+      "bilder/2026-11-10-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-09",
     "veckodag": "Monday",
     "title": "Heavy Three, Rope Rush",
