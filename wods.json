@@ -1,5 +1,60 @@
 [
   {
+    "datum": "2026-11-11",
+    "veckodag": "Wednesday",
+    "title": "Rings Low, Snatch Fast",
+    "format": "Skill EMOM 10 + AMRAP 12",
+    "workout": [
+      "A. Skill · EMOM 10 min",
+      "Odd: 3 Low-ring muscle-up transitions (feet on floor), slow",
+      "Even: 20 sec Ring support hold, rings turned out",
+      "Rest 3 min, then:",
+      "B. AMRAP 12 min",
+      "10 Alt. DB snatches (22.5/15 kg · 50/35 lb)",
+      "10/8 cal Assault/Echo bike",
+      "8 V-ups",
+      "Score A = quality reps + best hold time",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "Skill: ring rows with a slow, strict pull to the chest, plus a 15 sec support hold with feet on a box.",
+      "Metcon: DB snatches at 15/10 kg · 35/22 lb, or alt. DB power cleans. Swap V-ups for tuck-ups."
+    ],
+    "stimulus": "Part A is about clean positions and calm control, not speed. Part B is a steady, sustainable burner: move constantly and keep every round within about 10 seconds of the last.",
+    "strategy": [
+      "Skill: stop a rep early if the transition turns into a scramble.",
+      "Snatch in sets of 5 and switch arms at the halfway point.",
+      "Ride the bike at a hard but steady pace and save your legs for round 4+."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: low-ring transitions, 20 sec support holds, DB snatches 22.5/15 kg."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Ring rows (slow) in place of transitions, 15 sec support hold, DB 15/10 kg."
+      },
+      {
+        "name": "Beginner",
+        "text": "Ring rows, feet-on-box support hold, DB 10/7.5 kg, 6 V-ups or tuck-ups."
+      }
+    ],
+    "focus": [
+      "gymnastics",
+      "rings",
+      "core",
+      "engine"
+    ],
+    "caption": "Rings first, then a steady burner. Skill work gets your full attention today. 🔥\n\nA. Skill · EMOM 10 min\nOdd: 3 Low-ring muscle-up transitions (feet on floor), slow\nEven: 20 sec Ring support hold, rings turned out\n\nRest 3 min, then:\n\nB. AMRAP 12 min\n10 Alt. DB snatches (22.5/15 kg · 50/35 lb)\n10/8 cal Assault/Echo bike\n8 V-ups\n\nScore A = quality reps + best hold time\nScore B = rounds + reps\n\nScaled options:\n- Skill: ring rows with a slow, strict pull to the chest, plus a 15 sec support hold with feet on a box.\n- Metcon: DB snatches at 15/10 kg · 35/22 lb, or alt. DB power cleans. Swap V-ups for tuck-ups.\n\nCoach note: Part A is about clean positions and calm control, not speed. Part B is a steady burner. Keep moving, and keep every round within about 10 seconds of the last.\n\nInjured or unsure about a movement? Scale it and talk to a coach or doctor. 💪\n\nPost your quality reps, hold times and AMRAP score in the comments.\n\nSend this one to your training partner or tag them.\n\n#wod #functionalfitness #metcon #amrap",
+    "bilder": [
+      "bilder/2026-11-11-1.jpg",
+      "bilder/2026-11-11-2.jpg",
+      "bilder/2026-11-11-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-10",
     "veckodag": "Tuesday",
     "title": "Run, Row, Ride, Throw",
