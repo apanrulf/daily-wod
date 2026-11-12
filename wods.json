@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-11-12",
+    "veckodag": "Thursday",
+    "title": "Stack It, Then Sprint",
+    "format": "Every 2:00 x 5 + For Time · 9 min cap",
+    "workout": [
+      "A. Every 2:00 x 5 sets (10 min)",
+      "1 Power clean + 1 Front squat + 1 Push jerk",
+      "Build to a heavy but crisp complex",
+      "Start ~50/35 kg · 110/75 lb",
+      "Rest 3 min, then:",
+      "B. 3 Rounds For Time (9 min cap)",
+      "10 Burpees over the bar (empty bar, 20/15 kg · 45/35 lb)",
+      "8 Pull-ups",
+      "10/8 cal Row",
+      "Score A = top complex load",
+      "Score B = total time (or reps at the cap)"
+    ],
+    "scaling": [
+      "A: Hang power clean + front squat + push press, lighter load, same crisp reps.",
+      "B: Step over the bar, ring rows or banded pull-ups, 8/6 cal Row."
+    ],
+    "stimulus": "Part A is about clean bar speed and positions. Add load only when every rep stays crisp. Part B is a short, sharp 7-9 minute effort. Move steadily on the burpees and pull-ups so you can sprint the row.",
+    "strategy": [
+      "Add load in small jumps; stop at the last crisp complex.",
+      "Burpees: smooth, no rushing the jump over the bar.",
+      "Pull-ups: one fast set or 5-3. Hit the row hard."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Power clean, front squat and push jerk with no drops between lifts."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Start ~40/30 kg · 90/65 lb. Jumping pull-ups or banded. Row 8/6 cal."
+      },
+      {
+        "name": "Beginner",
+        "text": "Hang power clean + front squat + push press, 30/20 kg · 65/45 lb. Ring rows, step-over burpees."
+      }
+    ],
+    "focus": [
+      "olympic lifting",
+      "power clean",
+      "pull",
+      "engine"
+    ],
+    "caption": "Heavy, crisp and fast. Then a sprint to finish. 🔥\n\nA. Every 2:00 x 5 sets (10 min)\n1 Power clean + 1 Front squat + 1 Push jerk\nBuild to a heavy but crisp complex\nStart ~50/35 kg · 110/75 lb\n\nRest 3 min, then:\n\nB. 3 Rounds For Time (9 min cap)\n10 Burpees over the bar (empty bar, 20/15 kg · 45/35 lb)\n8 Pull-ups\n10/8 cal Row\n\nScore A = top complex load\nScore B = total time (or reps at the cap)\n\nScaled options:\nA: Hang power clean + front squat + push press, lighter load, same crisp reps.\nB: Step over the bar, ring rows or banded pull-ups, 8/6 cal Row.\n\nCoach note: Part A is about bar speed and good positions. Add load only when every rep stays crisp. Part B is a short, sharp effort. Move steadily on the burpees and pull-ups, then sprint the row. If you're unsure or have an injury, scale it and talk to a coach or doctor. 💪\n\nPost your top complex load and your time in the comments!\n\nSend this to your training partner or tag them.\n\n#wod #workoutoftheday #functionalfitness #metcon #fortime",
+    "bilder": [
+      "bilder/2026-11-12-1.jpg",
+      "bilder/2026-11-12-2.jpg",
+      "bilder/2026-11-12-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-11",
     "veckodag": "Wednesday",
     "title": "Rings Low, Snatch Fast",
