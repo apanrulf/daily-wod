@@ -1,5 +1,57 @@
 [
   {
+    "datum": "2026-11-13",
+    "veckodag": "Friday",
+    "title": "Swing, Press, Step",
+    "format": "5 Rounds For Time · 14 min cap",
+    "workout": [
+      "5 Rounds For Time:",
+      "15 KB swings (24/16 kg · 53/35 lb)",
+      "10 Hand-release push-ups",
+      "12 Box step-ups, alt. legs (50/40 cm · 20/16 in)",
+      "Time cap: 14 min",
+      "Score = total time (or reps completed at the cap)"
+    ],
+    "scaling": [
+      "Lighter KB (16/12 kg · 35/26 lb) and step-ups to a lower box (40/30 cm · 16/12 in)",
+      "Push-ups from an elevated surface (bar in a rack or box) or from the knees",
+      "Cut to 4 rounds if you can't hold steady pace by round 3"
+    ],
+    "stimulus": "A steady, honest triplet. Hips, chest and legs take turns, so no single muscle group burns out. Aim for about 2:00-2:45 per round and keep it moving the whole way.",
+    "strategy": [
+      "Swing in two sets of 8-7 so your grip and hips stay fresh.",
+      "Push-ups: break early and often, never to failure.",
+      "Step-ups are your recovery. Breathe and keep a steady rhythm."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 24/16 kg swings, chest to floor on push-ups, 50/40 cm box, full hip lockout at the top."
+      },
+      {
+        "name": "Intermediate",
+        "text": "20/12 kg swings (44/26 lb), 40 cm (16 in) box, push-ups with hands on a low box if needed."
+      },
+      {
+        "name": "Beginner",
+        "text": "12/8 kg swings (26/18 lb), 30 cm (12 in) box, incline or knee push-ups, 4 rounds."
+      }
+    ],
+    "focus": [
+      "posterior chain",
+      "push",
+      "legs",
+      "engine"
+    ],
+    "caption": "Friday means one thing: go hard, then go home happy. 🔥\n\nSWING, PRESS, STEP\n5 Rounds For Time · 14 min cap\n\n15 KB swings (24/16 kg · 53/35 lb)\n10 Hand-release push-ups\n12 Box step-ups, alt. legs (50/40 cm · 20/16 in)\n\nScore = total time (or reps completed at the cap)\n\nScaled options:\n- Lighter KB (16/12 kg · 35/26 lb) and a lower box (40/30 cm · 16/12 in)\n- Push-ups from an elevated surface or from the knees\n- Drop to 4 rounds if needed\n\nCoach note: This is a steady triplet. Aim for about 2:00-2:45 per round. Break the swings early (8-7), split the push-ups before you fail, and use the step-ups to breathe. Keep moving. If you have an injury or you're unsure about a movement, scale it and talk to a coach or doctor.\n\nPost your time or reps in the comments. 💪\n\nSend this one to your training partner or tag them below.\n\n#wod #fortime #functionalfitness #conditioning",
+    "bilder": [
+      "bilder/2026-11-13-1.jpg",
+      "bilder/2026-11-13-2.jpg",
+      "bilder/2026-11-13-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-12",
     "veckodag": "Thursday",
     "title": "Stack It, Then Sprint",
