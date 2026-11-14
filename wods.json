@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-11-14",
+    "veckodag": "Saturday",
+    "title": "Four Stations, One Clock",
+    "format": "Partner · 5 Rounds For Time · 32 min cap",
+    "workout": [
+      "Teams of 2 · one works, one rests",
+      "5 Rounds For Time (team):",
+      "18/14 cal Row",
+      "20 Wall balls (9/6 kg · 20/14 lb)",
+      "14 Toes-to-bar",
+      "200 m Run",
+      "Split reps any way you like",
+      "Only one partner works at a time",
+      "Time cap: 32 min",
+      "Score = team time (or rounds at the cap)"
+    ],
+    "scaling": [
+      "Toes-to-bar: hanging knee raises or V-ups",
+      "Wall balls: 6/4 kg · 14/9 lb, or lower the target height",
+      "Run: 250 m Row or 20/15 cal Bike instead of 200 m"
+    ],
+    "stimulus": "A steady, sustainable team grind with a mix of legs, core and engine. Aim for about 5:30-6:15 per round. Keep the swaps smooth and don't sprint the first round.",
+    "strategy": [
+      "Swap often on the row: short turns keep the pace high.",
+      "Break wall balls early: 10-10 or 7-7-6.",
+      "Keep toes-to-bar sets small (4-5) before your grip fades."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: toes-to-bar, 9/6 kg wall balls, 200 m run."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Toes-to-bar broken up or hanging knee raises, 6/4 kg wall balls, 4 rounds."
+      },
+      {
+        "name": "Beginner",
+        "text": "V-ups, 6/4 kg wall balls, 150 m run or 15/12 cal bike, 4 rounds."
+      }
+    ],
+    "focus": [
+      "engine",
+      "legs",
+      "core",
+      "running"
+    ],
+    "caption": "Grab a partner. One works, one rests, the clock keeps running. 🔥\n\nFOUR STATIONS, ONE CLOCK\nPartner · 5 Rounds For Time · 32 min cap\n\nTeams of 2 · one works at a time\n5 Rounds For Time (team):\n18/14 cal Row\n20 Wall balls (9/6 kg · 20/14 lb)\n14 Toes-to-bar\n200 m Run\n\nSplit reps any way you like. Only one partner works at a time.\nScore = team time (or rounds at the cap)\n\nScaled options:\n- Toes-to-bar: hanging knee raises or V-ups\n- Wall balls: 6/4 kg · 14/9 lb, or lower the target height\n- Run: 250 m Row or 20/15 cal Bike instead of 200 m\n- Shorter on time? Do 4 rounds.\n\nCoach note: This is a steady team grind. Aim for about 5:30-6:15 per round. Break the wall balls early, keep the toes-to-bar sets small, and make your swaps smooth. Don't sprint round one.\n\nInjured or unsure about a movement? Scale it and talk to a coach or doctor.\n\nDrop your team time (or rounds at the cap) in the comments. 💪\n\nSend this to your training partner or tag them. Saturday is better together.\n\n#wod #workoutoftheday #functionalfitness #metcon #fortime",
+    "bilder": [
+      "bilder/2026-11-14-1.jpg",
+      "bilder/2026-11-14-2.jpg",
+      "bilder/2026-11-14-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-13",
     "veckodag": "Friday",
     "title": "Swing, Press, Step",
