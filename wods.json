@@ -1,5 +1,63 @@
 [
   {
+    "datum": "2026-11-15",
+    "veckodag": "Sunday",
+    "title": "Slow Three Sunday",
+    "format": "Active Recovery · 40 min easy",
+    "workout": [
+      "A. 24 min easy aerobic, Zone 1-2",
+      "3 Rounds: 4 min Bike, 2 min Row, 2 min brisk walk",
+      "Nose breathing, full sentences",
+      "B. 2 Rounds, no rush:",
+      "8 Cat-cows, slow",
+      "6/side Lizard lunge with thoracic reach",
+      "20 sec Relaxed dead hang (feet on a box if needed)",
+      "C. Hold and breathe:",
+      "60 sec/side Couch stretch (wall or box)",
+      "60 sec/side Cross-body shoulder stretch",
+      "2 min Supine butterfly stretch",
+      "3 min on your back, hands on belly, slow breaths"
+    ],
+    "scaling": [
+      "Short on time: do A at 16 min (2 rounds) and one round of B.",
+      "Swap the dead hang for a standing lat stretch, or skip it.",
+      "Shorten any hold that feels sharp. Stay in the easy range."
+    ],
+    "stimulus": "This is a recovery day, so keep every minute easy. You should finish feeling better than when you started, not more tired.",
+    "strategy": [
+      "Zone 1-2: if you can't speak full sentences, slow down.",
+      "Move slowly through B. Breathe out as you go deeper.",
+      "Keep the holds gentle. No forcing the range."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 24 min easy aerobic, 2 rounds of B, all holds in C."
+      },
+      {
+        "name": "Intermediate",
+        "text": "2 rounds of A (16 min), 2 rounds of B, holds cut to 45 sec."
+      },
+      {
+        "name": "Beginner",
+        "text": "1 round of A (8 min), 1 round of B, holds of 30-45 sec. Skip the hang."
+      }
+    ],
+    "focus": [
+      "recovery",
+      "mobility",
+      "aerobic base",
+      "hips and shoulders"
+    ],
+    "caption": "Easy day. Do it properly. 💪\n\nSLOW THREE SUNDAY\nActive Recovery · 40 min easy\n\nA. 24 min easy aerobic, Zone 1-2\n3 Rounds: 4 min Bike, 2 min Row, 2 min brisk walk\nNose breathing, full sentences\n\nB. 2 Rounds, no rush:\n8 Cat-cows, slow\n6/side Lizard lunge with thoracic reach\n20 sec Relaxed dead hang (feet on a box if needed)\n\nC. Hold and breathe:\n60 sec/side Couch stretch (wall or box)\n60 sec/side Cross-body shoulder stretch\n2 min Supine butterfly stretch\n3 min on your back, hands on belly, slow breaths\n\nScaled options:\n- Short on time: do A at 16 min (2 rounds) and one round of B.\n- Swap the dead hang for a standing lat stretch, or skip it.\n- Shorten any hold that feels sharp. Stay in the easy range.\n\nCoach note: This is a recovery day, so keep every minute easy. You should finish feeling better than when you started, not more tired.\n\nUnsure about a movement or carrying an injury? Scale it and talk to a coach or doctor.\n\nDid it today? Tell us in the comments what you did and how long you moved for.\n\nSend this to your training partner or tag them so you both recover well. ⏱️\n\n#wod #workoutoftheday #functionalfitness",
+    "bilder": [
+      "bilder/2026-11-15-1.jpg",
+      "bilder/2026-11-15-2.jpg",
+      "bilder/2026-11-15-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-14",
     "veckodag": "Saturday",
     "title": "Four Stations, One Clock",
