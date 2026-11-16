@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-16",
+    "veckodag": "Monday",
+    "title": "Squat Heavy, Press Quick",
+    "format": "Strength + For Time · 9 min cap",
+    "workout": [
+      "A. Back squat · 20 min",
+      "Build to a heavy set of 5 (RPE 8-9)",
+      "Then 2 x 6 at ~75% of your heavy 5",
+      "Rest 2 min between back-off sets",
+      "Rest 3 min, then:",
+      "B. 4 Rounds For Time (9 min cap)",
+      "10/8 cal Row",
+      "8 Alt. DB push presses (22.5/15 kg · 50/35 lb)",
+      "8 Ring rows",
+      "Score A = heavy 5 load",
+      "Score B = total time (or reps at the cap)"
+    ],
+    "scaling": [
+      "Squat: build to a heavy 8 instead, or use a box squat to a set depth.",
+      "DB push press: lighter dumbbells (15/10 kg · 35/22 lb) or strict press.",
+      "Ring rows: walk your feet back so the rings are easier. Row: drop to 8/6 cal."
+    ],
+    "stimulus": "Part A is a heavy but clean squat day. Keep every rep tight and leave one or two in the tank on the top set. Part B is a short, steady upper-body and engine piece. Move fast but don't redline in round 1.",
+    "strategy": [
+      "Add weight in clear jumps. Save the big set for the last 2-3 attempts.",
+      "Row at 85%, not 100%. Your legs are tired from squats.",
+      "Break the DB presses early (4-4) and keep rest under 5 sec."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: heavy back squat 5, DB 22.5/15 kg, full 4 rounds."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Squat heavy 5 at RPE 8. DB 15/10 kg. Row 8/6 cal. Ring rows with feet flat."
+      },
+      {
+        "name": "Beginner",
+        "text": "Goblet or box squat, 3 x 8 moderate. DB 10/7.5 kg. 3 rounds, row 6/5 cal."
+      }
+    ],
+    "focus": [
+      "legs",
+      "squat",
+      "push",
+      "pull"
+    ],
+    "caption": "Heavy squats first, then a quick upper-body sprint. Let's go. 💪\n\nMONDAY WOD: Squat Heavy, Press Quick\n\nA. Back squat · 20 min\nBuild to a heavy set of 5 (RPE 8-9)\nThen 2 x 6 at ~75% of your heavy 5\nRest 2 min between back-off sets\n\nRest 3 min, then:\n\nB. 4 Rounds For Time (9 min cap)\n10/8 cal Row\n8 Alt. DB push presses (22.5/15 kg · 50/35 lb)\n8 Ring rows\n\nScore A = heavy 5 load\nScore B = total time (or reps at the cap)\n\nScaled options:\n- Squat: heavy 8 instead, or box squat to a set depth\n- DB push press: 15/10 kg · 35/22 lb, or strict press\n- Ring rows: feet back to make them easier. Row 8/6 cal\n\nCoach note: Part A is about clean, tight reps. Leave one or two in the tank on the top set. Part B is short and steady. Move fast, keep rests short, and don't redline in round 1. If you have an injury or aren't sure about a movement, scale it and talk to a coach or doctor.\n\nPost your heavy 5 and your Part B time in the comments ⏱️\n\nSend this to your training partner or tag them.\n\n#wod #strengthtraining #functionalfitness #metcon #fortime",
+    "bilder": [
+      "bilder/2026-11-16-1.jpg",
+      "bilder/2026-11-16-2.jpg",
+      "bilder/2026-11-16-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-15",
     "veckodag": "Sunday",
     "title": "Slow Three Sunday",
