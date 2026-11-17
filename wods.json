@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-11-17",
+    "veckodag": "Tuesday",
+    "title": "Steady Then Surge",
+    "format": "AMRAP 12 + Bike Intervals 8",
+    "workout": [
+      "A. AMRAP 12 min · steady pace",
+      "200 m Run",
+      "12/9 cal Row",
+      "10 Alt. DB hang cleans (15/10 kg · 35/22 lb)",
+      "Rest 3 min, then:",
+      "B. 8 min Bike · 1:00 hard / 1:00 easy",
+      "Hard minutes: max cal on the Assault/Echo bike",
+      "Easy minutes: spin light, breathe",
+      "Score A = rounds + reps",
+      "Score B = total cal from the 4 hard minutes"
+    ],
+    "scaling": [
+      "Run: swap for 250/200 m Row or 12/9 cal Bike.",
+      "DB hang cleans: lighter DBs (10/7.5 kg · 22/15 lb) or 10 DB deadlifts.",
+      "Bike intervals: hard minutes at ~80% effort, easy minutes unchanged."
+    ],
+    "stimulus": "Part A is a steady aerobic grind: you should be able to hold the same round time for all 12 minutes. Part B is a repeatable surge: go hard for 60 sec, then recover just enough to match the next one.",
+    "strategy": [
+      "Aim for 3:00-3:30 per round in A. Don't sprint round 1.",
+      "Row smooth: long strokes, steady breathing.",
+      "In B, pick a hard-minute pace you can repeat four times."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 200 m run, 12/9 cal row, DB hang cleans at 15/10 kg."
+      },
+      {
+        "name": "Intermediate",
+        "text": "10/8 cal Row, DBs 12.5/7.5 kg (27/17 lb), bike hard minutes at ~85%."
+      },
+      {
+        "name": "Beginner",
+        "text": "200 m Run swapped for 10 cal Bike, 10 DB deadlifts at 10/5 kg (22/11 lb), bike at ~75%."
+      }
+    ],
+    "focus": [
+      "engine",
+      "monostructural",
+      "running",
+      "aerobic base"
+    ],
+    "caption": "Hold the pace for 12, then find another gear for 4. ⏱️\n\nTUESDAY ENGINE DAY\n\nA. AMRAP 12 min (steady pace)\n200 m Run\n12/9 cal Row\n10 Alt. DB hang cleans (15/10 kg · 35/22 lb)\n\nRest 3 min, then:\n\nB. 8 min Bike · 1:00 hard / 1:00 easy\nHard minutes: max cal on the Assault/Echo bike\nEasy minutes: spin light, breathe\n\nScore A = rounds + reps\nScore B = total cal from the 4 hard minutes\n\nScaled options:\n- Run: swap for 250/200 m Row or 12/9 cal Bike\n- DB hang cleans: lighter DBs (10/7.5 kg · 22/15 lb) or 10 DB deadlifts\n- Bike intervals: hard minutes at ~80% effort\n\nCoach note: Part A is aerobic and steady. Aim for 3:00-3:30 per round and keep every round close to the same. Part B is repeatable surges, so pick a hard-minute pace you can hit four times. If you have an injury or you're unsure about a movement, scale it and talk to a coach or doctor. 💪\n\nPost your rounds + reps and your bike calories in the comments!\n\nSend this to a training partner or tag them in.\n\n#wod #conditioning #amrap #functionalfitness",
+    "bilder": [
+      "bilder/2026-11-17-1.jpg",
+      "bilder/2026-11-17-2.jpg",
+      "bilder/2026-11-17-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-16",
     "veckodag": "Monday",
     "title": "Squat Heavy, Press Quick",
