@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-19",
+    "veckodag": "Thursday",
+    "title": "Pull High, Catch Low",
+    "format": "Every 1:30 x 8 + AMRAP 7",
+    "workout": [
+      "A. Every 1:30 x 8 sets (12 min)",
+      "1 Snatch pull + 1 Hang squat snatch",
+      "Build to a heavy but crisp complex",
+      "Start ~40/30 kg · 90/65 lb",
+      "Rest 3 min, then:",
+      "B. AMRAP 7 min",
+      "10/8 cal Assault/Echo bike",
+      "8 DB thrusters (2x 15/10 kg · 2x 35/22 lb)",
+      "6 Burpees",
+      "Score A = top complex load",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "A: Use a PVC pipe or empty bar, hang power snatch, and add a pause at the knee.",
+      "B: Thrusters with 2x 10/7.5 kg (2x 22/17 lb), or step the burpees back.",
+      "Any sharp pain or doubt on the lifts? Scale and ask a coach or doctor."
+    ],
+    "stimulus": "Part A is about speed under the bar and a clean catch, so stay crisp and stop adding load if the bar path gets sloppy. Part B is short and sharp: aim for a hard, steady effort that you can hold for 7 minutes.",
+    "strategy": [
+      "A: Finish the pull tall, then drop fast under the bar.",
+      "A: Add load only when both reps in the complex are fast.",
+      "B: Hard on the bike, then break thrusters early (4-4)."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Heavy but crisp complex, DB thrusters at 15/10 kg per hand."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Hang power snatch, 30/20 kg · 65/45 lb. Thrusters 2x 12.5/7.5 kg."
+      },
+      {
+        "name": "Beginner",
+        "text": "PVC or empty bar, 2x 10/7.5 kg thrusters, burpees with step-backs."
+      }
+    ],
+    "focus": [
+      "olympic lifting",
+      "snatch",
+      "engine",
+      "shoulders"
+    ],
+    "caption": "Pull high, catch low, then empty the tank. 🔥\n\nA. Every 1:30 x 8 sets (12 min)\n1 Snatch pull + 1 Hang squat snatch\nBuild to a heavy but crisp complex\nStart ~40/30 kg · 90/65 lb\n\nRest 3 min, then:\n\nB. AMRAP 7 min\n10/8 cal Assault/Echo bike\n8 DB thrusters (2x 15/10 kg · 2x 35/22 lb)\n6 Burpees\n\nScore A = top complex load\nScore B = rounds + reps\n\nScaled options:\nA: PVC or empty bar, hang power snatch, pause at the knee.\nB: Thrusters with 2x 10/7.5 kg (2x 22/17 lb), step the burpees back.\nIf you have an injury or are unsure, scale and talk to a coach or doctor.\n\nCoach note: Part A is about speed under the bar and a clean catch. Stop adding load when the bar path gets sloppy. Part B is short and sharp: hard on the bike, steady on the thrusters, and no long rests. ⏱️\n\nPost your top complex load and your rounds + reps in the comments!\n\nSend this to your training partner or tag them below.\n\n#wod #workoutoftheday #functionalfitness #metcon #amrap",
+    "bilder": [
+      "bilder/2026-11-19-1.jpg",
+      "bilder/2026-11-19-2.jpg",
+      "bilder/2026-11-19-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-18",
     "veckodag": "Wednesday",
     "title": "Upside Down, Right Up",
