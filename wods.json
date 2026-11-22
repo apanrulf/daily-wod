@@ -1,5 +1,63 @@
 [
   {
+    "datum": "2026-11-22",
+    "veckodag": "Sunday",
+    "title": "Reset Sunday",
+    "format": "Active Recovery · 40 min easy",
+    "workout": [
+      "A. 25 min easy aerobic, Zone 1-2",
+      "5 min Row, 10 min Jog or walk, 10 min Bike",
+      "Nose breathing, full sentences",
+      "B. 2 Rounds, no rush:",
+      "8 Wall slides, slow",
+      "6/side 90/90 hip switches",
+      "6 Goblet squat pry holds, 5 sec (KB 8/6 kg · 18/12 lb)",
+      "C. Hold and breathe:",
+      "60 sec/side Kneeling lat stretch (hands on a box)",
+      "60 sec/side Standing calf stretch at the wall",
+      "90 sec Frog stretch, easy range",
+      "3 min Legs up the wall, slow breaths"
+    ],
+    "scaling": [
+      "Shorten part A to 15-20 min, or walk the whole thing.",
+      "Skip the KB in B: do a bodyweight squat hold, hands on a post or rack.",
+      "Skip the frog stretch and do a child's pose instead."
+    ],
+    "stimulus": "Zero intensity. You should finish feeling better than you started. Keep every minute conversational and stay out of any stretch that hurts.",
+    "strategy": [
+      "If you can't talk in full sentences, slow down.",
+      "Move through the mobility slowly. Breathe out into each hold.",
+      "Stop any position that pinches or hurts. Ease off."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written. Keep it easy the whole way: no pushing, no racing."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Part A 20 min: 5 row, 8 jog/walk, 7 bike. One round of B, full C."
+      },
+      {
+        "name": "Beginner",
+        "text": "15-20 min easy walk or bike. One round of B, bodyweight only. Hold C for 30-45 sec."
+      }
+    ],
+    "focus": [
+      "recovery",
+      "mobility",
+      "aerobic base",
+      "hips and shoulders"
+    ],
+    "caption": "Sunday is for resetting, not for grinding. Easy minutes, slow breaths, and you're ready for the week. 💪\n\nRESET SUNDAY · Active Recovery · ~40 min easy\n\nA. 25 min easy aerobic, Zone 1-2\n5 min Row\n10 min Jog or walk\n10 min Bike\nNose breathing, full sentences\n\nB. 2 Rounds, no rush:\n8 Wall slides, slow\n6/side 90/90 hip switches\n6 Goblet squat pry holds, 5 sec (KB 8/6 kg · 18/12 lb)\n\nC. Hold and breathe:\n60 sec/side Kneeling lat stretch (hands on a box)\n60 sec/side Standing calf stretch at the wall\n90 sec Frog stretch, easy range\n3 min Legs up the wall, slow breaths\n\nScaled options:\n- Shorten part A to 15-20 min, or walk the whole thing\n- Bodyweight squat hold instead of the KB, hands on a post or rack\n- Child's pose instead of the frog stretch\n\nCoach note: Zero intensity today. If you can't talk in full sentences, slow down. Stay out of any stretch that hurts. If you're injured or unsure, scale it and talk to a coach or doctor.\n\nHow did it feel? Drop your minutes and notes in the comments. ⏱️\n\nSend this to a training partner or tag them so you both recover well.\n\n#workoutoftheday #functionalfitness #conditioning #wod",
+    "bilder": [
+      "bilder/2026-11-22-1.jpg",
+      "bilder/2026-11-22-2.jpg",
+      "bilder/2026-11-22-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-21",
     "veckodag": "Saturday",
     "title": "Devil's Share",
