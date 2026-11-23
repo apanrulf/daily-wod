@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-23",
+    "veckodag": "Monday",
+    "title": "Press Heavy, Pull Fast",
+    "format": "Strength + For Time · 9 min cap",
+    "workout": [
+      "A. Strict press · 16 min",
+      "Build to a heavy set of 3 (RPE 8-9)",
+      "Then 3 x 5 at ~80% of your heavy 3",
+      "Rest 90 sec between back-off sets",
+      "Rest 3 min, then:",
+      "B. 3 Rounds For Time (9 min cap)",
+      "12/9 cal Assault/Echo bike",
+      "9 Pull-ups",
+      "12 KB swings (24/16 kg · 53/35 lb)",
+      "Score A = heavy 3 load",
+      "Score B = total time (or reps at the cap)"
+    ],
+    "scaling": [
+      "A: Use a lighter load or dumbbells, and stop any set where the bar path breaks down.",
+      "B: Banded or ring-row pull-ups (6-8 reps), bike 9/7 cal, KB 16/12 kg · 35/26 lb.",
+      "Any pain, or unsure about a movement? Scale it and talk to a coach or doctor."
+    ],
+    "stimulus": "Part A is a heavy, strict overhead press with tight, controlled reps. Part B is a short, sharp pull-and-hinge piece, so finish in 6-8 min. Go out fast on the bike, then keep the pull-ups and swings in small, quick sets.",
+    "strategy": [
+      "Build the press in 3-4 jumps. Save the grind for the top set.",
+      "Bike hard but not all-out. Your grip has to last for the pull-ups.",
+      "Pull-ups: 5-4 or 3 sets of 3. Swings: unbroken or 2 sets."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: heavy strict press, then the metcon with the prescribed loads."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Press RPE 7-8. Banded pull-ups, bike 10/8 cal, KB 20/12 kg · 44/26 lb."
+      },
+      {
+        "name": "Beginner",
+        "text": "Light DB or empty-bar press. Ring rows x 9, bike 8/6 cal, KB 12/8 kg · 26/18 lb."
+      }
+    ],
+    "focus": [
+      "shoulders",
+      "push",
+      "pull",
+      "engine"
+    ],
+    "caption": "New week, heavy overhead. Press strong, then pull fast. 💪\n\nA. Strict press · 16 min\nBuild to a heavy set of 3 (RPE 8-9)\nThen 3 x 5 at ~80% of your heavy 3\nRest 90 sec between back-off sets\n\nRest 3 min, then:\n\nB. 3 Rounds For Time (9 min cap)\n12/9 cal Assault/Echo bike\n9 Pull-ups\n12 KB swings (24/16 kg · 53/35 lb)\n\nScaled options:\nA: Lighter load or dumbbells. Stop a set when the bar path breaks down.\nB: Banded pull-ups or ring rows, bike 9/7 cal, KB 16/12 kg · 35/26 lb.\nAny pain, or unsure about a movement? Scale it and talk to a coach or doctor.\n\nCoach note: Part A is about tight, strict reps. Part B is short and sharp, so aim to finish in 6-8 min. Hit the bike hard, then keep the pull-ups and swings in small, quick sets.\n\nPost your heavy 3 and your time in the comments ⏱️\n\nSend this one to your training partner or tag them.\n\n#wod #strengthtraining #metcon #functionalfitness",
+    "bilder": [
+      "bilder/2026-11-23-1.jpg",
+      "bilder/2026-11-23-2.jpg",
+      "bilder/2026-11-23-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-22",
     "veckodag": "Sunday",
     "title": "Reset Sunday",
