@@ -1,5 +1,59 @@
 [
   {
+    "datum": "2026-11-24",
+    "veckodag": "Tuesday",
+    "title": "Five Fives, Hold Pace",
+    "format": "Every 5:00 x 5 · 25 min",
+    "workout": [
+      "Every 5:00 x 5 sets (25 min)",
+      "200 m Run",
+      "14/11 cal Row",
+      "60 Single-unders (or 30 Double-unders)",
+      "Rest whatever is left of the 5:00",
+      "Target: 3:30-4:15 work per round",
+      "Hold the same pace every round",
+      "Score = sum of your 5 work times"
+    ],
+    "scaling": [
+      "Run 200 m becomes 250 m Bike or a brisk 2 min walk-jog.",
+      "Row 14/11 cal becomes 10/8 cal.",
+      "Can't finish inside 5:00? Cut the rope to 40 Single-unders or the row to 10/8 cal."
+    ],
+    "stimulus": "A steady engine builder with built-in rest. Every round should feel strong but repeatable, with work times within 15 sec of each other. Rounds 4 and 5 are where pacing pays off.",
+    "strategy": [
+      "Run at 80%. Save the legs for rounds 4 and 5.",
+      "Row long and smooth. Break the rope early.",
+      "Keep all 5 round times within 15 sec of each other."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: 200 m run, 14/11 cal row, 60 single-unders (or 30 doubles) per round."
+      },
+      {
+        "name": "Intermediate",
+        "text": "200 m run, 12/9 cal row, 60 single-unders. Finish each round inside 4:30."
+      },
+      {
+        "name": "Beginner",
+        "text": "150 m run, 10/8 cal row, 40 single-unders. Rest fully before each new 5:00."
+      }
+    ],
+    "focus": [
+      "engine",
+      "monostructural",
+      "running",
+      "coordination"
+    ],
+    "caption": "Five rounds. Five minutes each. Hold the pace. 🔥\n\nEvery 5:00 x 5 sets (25 min)\n200 m Run\n14/11 cal Row\n60 Single-unders (or 30 Double-unders)\n\nStart each round on the 5:00 mark and rest whatever is left. Target 3:30-4:15 of work per round. Score = sum of your 5 work times.\n\nScaled options:\n- Run 200 m becomes 250 m Bike or a 2 min brisk walk-jog\n- Row 14/11 cal becomes 10/8 cal\n- Rope: 40 Single-unders if 60 won't fit inside the 5:00\n\nCoach note: This is an engine builder with built-in rest. Run at 80%, row long and smooth, break the rope early. Your last round should be within 15 sec of your first. Injured or unsure? Scale it and talk to a coach or doctor.\n\nPost your 5 round times and your total in the comments ⏱️\n\nSend this to your training partner or tag them in.\n\n#wod #functionalfitness #conditioning #metcon #workoutoftheday",
+    "bilder": [
+      "bilder/2026-11-24-1.jpg",
+      "bilder/2026-11-24-2.jpg",
+      "bilder/2026-11-24-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-23",
     "veckodag": "Monday",
     "title": "Press Heavy, Pull Fast",
