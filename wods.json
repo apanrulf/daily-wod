@@ -1,5 +1,61 @@
 [
   {
+    "datum": "2026-11-25",
+    "veckodag": "Wednesday",
+    "title": "Bar Skill, Bike Grind",
+    "format": "Skill EMOM 10 + AMRAP 12",
+    "workout": [
+      "A. Skill · EMOM 10 min",
+      "Odd: 3 Strict chest-to-bar pull-ups, slow lowering",
+      "Even: 6 Kip swings, tight arch-to-hollow",
+      "Rest 3 min, then:",
+      "B. AMRAP 12 min",
+      "10/8 cal Assault/Echo bike",
+      "10 Wall balls (9/6 kg · 20/14 lb)",
+      "8 DB Romanian deadlifts (2x 20/15 kg · 2x 45/35 lb)",
+      "Score A = quality reps",
+      "Score B = rounds + reps"
+    ],
+    "scaling": [
+      "A: Strict pull-ups, banded pull-ups or ring rows (feet elevated)",
+      "B: Bike 8/6 cal, wall balls 6/4 kg (14/9 lb), DBs 2x 12.5/10 kg (2x 25/22 lb)",
+      "Any pain or doubt: scale it down and talk to a coach or doctor."
+    ],
+    "stimulus": "Part A is about clean, controlled pulling and a tight kipping shape, so stop a rep short of failure. Part B is a steady grind: you should be able to keep moving the whole 12 minutes.",
+    "strategy": [
+      "Skill: stop each set while reps are still crisp.",
+      "Bike at 80%. Save the legs for the wall balls.",
+      "Break wall balls early: 5-5 beats a long set and a long rest."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: strict chest-to-bar, bike 10/8 cal, wall balls 9/6 kg, DBs 2x 20/15 kg."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Strict pull-ups (3 reps), bike 8/6 cal, DBs 2x 15/10 kg (2x 35/22 lb)."
+      },
+      {
+        "name": "Beginner",
+        "text": "Ring rows (feet elevated), bike 6/5 cal, wall balls 6/4 kg, DBs 2x 10/7.5 kg."
+      }
+    ],
+    "focus": [
+      "gymnastics",
+      "pull",
+      "engine",
+      "posterior chain"
+    ],
+    "caption": "Today's skill is a strong pull. Take your time with it. 💪\n\nA. Skill · EMOM 10 min\nOdd: 3 Strict chest-to-bar pull-ups, slow lowering\nEven: 6 Kip swings, tight arch-to-hollow\n\nRest 3 min, then:\n\nB. AMRAP 12 min\n10/8 cal Assault/Echo bike\n10 Wall balls (9/6 kg · 20/14 lb)\n8 DB Romanian deadlifts (2x 20/15 kg · 2x 45/35 lb)\n\nScaling:\nA: Strict pull-ups, banded pull-ups or ring rows (feet elevated).\nB: Bike 8/6 cal, wall balls 6/4 kg (14/9 lb), DBs 2x 12.5/10 kg (2x 25/22 lb).\nAny pain or doubt: scale it down and talk to a coach or doctor.\n\nCoach note: Keep the skill work crisp and stop a rep short of failure. In the AMRAP, bike at 80%, break wall balls early and keep moving for the full 12 minutes.\n\nPost your quality reps and your rounds + reps in the comments ⏱️\n\nSend this to your training partner or tag them in.\n\n#wod #functionalfitness #metcon #amrap",
+    "bilder": [
+      "bilder/2026-11-25-1.jpg",
+      "bilder/2026-11-25-2.jpg",
+      "bilder/2026-11-25-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-24",
     "veckodag": "Tuesday",
     "title": "Five Fives, Hold Pace",
