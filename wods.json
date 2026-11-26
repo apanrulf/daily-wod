@@ -1,5 +1,62 @@
 [
   {
+    "datum": "2026-11-26",
+    "veckodag": "Thursday",
+    "title": "Clean Up, Jerk Over",
+    "format": "Every 2:00 x 6 + For Time · 8 min cap",
+    "workout": [
+      "A. Every 2:00 x 6 sets (12 min)",
+      "1 Squat clean + 1 Split jerk",
+      "Build to a heavy but crisp complex",
+      "Start ~50/35 kg · 110/75 lb",
+      "Rest 3 min, then:",
+      "B. 3 Rounds For Time (8 min cap)",
+      "200 m Run",
+      "10 Burpee box step-overs (50/40 cm · 20/16 in)",
+      "12 Sit-ups",
+      "Score A = top complex load",
+      "Score B = total time (or reps at the cap)"
+    ],
+    "scaling": [
+      "A: Power clean + push jerk, or hang squat clean + push jerk, at a lighter load.",
+      "B: Burpees to a 30 cm step with no box step-over. Swap the run for a 250/200 m row.",
+      "Unsure about a lift or carrying an injury? Scale it and check with a coach or doctor."
+    ],
+    "stimulus": "Part A is about speed under the bar and clean technique. Stop at the heaviest complex you can do with good form. Part B is short and sharp. Run fast and keep moving through the burpees, because the sit-ups are your chance to recover.",
+    "strategy": [
+      "Part A: add weight in small jumps and stay crisp.",
+      "Part B: run hard but controlled, and don't sit on the burpees.",
+      "Break the sit-ups early so you hold the same pace every round."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: squat clean + split jerk, full run, box step-over burpees."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Power clean + split jerk, ~40/30 kg · 90/65 lb start. Step-over burpees to a 40/30 cm box."
+      },
+      {
+        "name": "Beginner",
+        "text": "Hang power clean + push press, ~30/20 kg · 65/45 lb. 150 m run, 8 burpees, 10 sit-ups."
+      }
+    ],
+    "focus": [
+      "olympic lifting",
+      "clean and jerk",
+      "legs",
+      "engine"
+    ],
+    "caption": "Heavy clean and jerk first, then a fast finisher. 🔥\n\nA. Every 2:00 x 6 sets (12 min)\n1 Squat clean + 1 Split jerk\nBuild to a heavy but crisp complex\nStart ~50/35 kg · 110/75 lb\n\nRest 3 min, then:\n\nB. 3 Rounds For Time (8 min cap)\n200 m Run\n10 Burpee box step-overs (50/40 cm · 20/16 in)\n12 Sit-ups\n\nScore A = top complex load\nScore B = total time (or reps at the cap)\n\nScaled options:\nA: Power clean + push jerk, or hang squat clean + push jerk, at a lighter load.\nB: Burpees to a 30 cm step with no box step-over. Swap the run for a 250/200 m row.\nUnsure about a lift or carrying an injury? Scale it and check with a coach or doctor.\n\nCoach note: Part A is about speed under the bar and clean technique. Stop at the heaviest complex you can do with good form. Part B is short and sharp. Run fast and keep moving through the burpees. The sit-ups are your chance to recover.\n\nPost your top complex load and your time in the comments. 💪\n\nSend this to your training partner or tag them in.\n\n#wod #workoutoftheday #functionalfitness #strengthtraining #conditioning",
+    "bilder": [
+      "bilder/2026-11-26-1.jpg",
+      "bilder/2026-11-26-2.jpg",
+      "bilder/2026-11-26-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-25",
     "veckodag": "Wednesday",
     "title": "Bar Skill, Bike Grind",
