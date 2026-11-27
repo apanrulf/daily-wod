@@ -1,5 +1,57 @@
 [
   {
+    "datum": "2026-11-27",
+    "veckodag": "Friday",
+    "title": "Bike, Hang, Make It",
+    "format": "4 Rounds For Time · 14 min cap",
+    "workout": [
+      "4 Rounds For Time:",
+      "12/9 cal Assault/Echo bike",
+      "10 Toes-to-bar",
+      "8 DB man-makers (2x 12.5/10 kg · 2x 27.5/22 lb)",
+      "Time cap: 14 min",
+      "Score = total time (or reps completed at the cap)"
+    ],
+    "scaling": [
+      "Toes-to-bar: hanging knee raises or V-ups",
+      "Man-makers: lighter DBs, step back instead of jumping, no push-up",
+      "Bike: drop 2-3 cal per round"
+    ],
+    "stimulus": "A steady, honest grind of about 11-13 minutes. Hold the bike at a pace you can recover from, and keep the toes-to-bar and man-makers moving in small, unbroken sets.",
+    "strategy": [
+      "Bike at 80%. Save your legs and your breathing for the man-makers.",
+      "Break toes-to-bar early: 5-5 or 4-3-3. Don't fail a set.",
+      "Man-makers: touch and go, set the DBs and move. Don't rest on the floor."
+    ],
+    "levels": [
+      {
+        "name": "Rx",
+        "text": "As written: toes-to-bar, 2x 12.5/10 kg man-makers with a full push-up."
+      },
+      {
+        "name": "Intermediate",
+        "text": "Toes-to-bar broken as needed, 2x 10/7.5 kg DBs, bike 10/8 cal."
+      },
+      {
+        "name": "Beginner",
+        "text": "Knee raises, 2x 5 kg DBs, step-back man-makers with no push-up, bike 8/6 cal."
+      }
+    ],
+    "focus": [
+      "engine",
+      "core",
+      "full body",
+      "push"
+    ],
+    "caption": "Friday means one thing: put your head down and get it done. 🔥\n\n4 Rounds For Time (14 min cap):\n12/9 cal Assault/Echo bike\n10 Toes-to-bar\n8 DB man-makers (2x 12.5/10 kg · 2x 27.5/22 lb)\n\nScore = total time (or reps completed at the cap).\n\nScaled options:\n- Toes-to-bar: hanging knee raises or V-ups\n- Man-makers: lighter DBs, step back instead of jumping, no push-up\n- Bike: drop 2-3 cal per round\n\nCoach note: This one should take about 11-13 minutes. Ride the bike at about 80%, break the toes-to-bar early (5-5 or 4-3-3), and keep the man-makers touch and go. Steady pace, no big rests.\n\nNew to this or carrying an injury? Scale it and talk to a coach or doctor.\n\nPost your time or reps in the comments. 💪\n\nSend this to your training partner or tag them in the comments.\n\n#wod #fortime #functionalfitness #conditioning",
+    "bilder": [
+      "bilder/2026-11-27-1.jpg",
+      "bilder/2026-11-27-2.jpg",
+      "bilder/2026-11-27-3.jpg"
+    ],
+    "status": "redo"
+  },
+  {
     "datum": "2026-11-26",
     "veckodag": "Thursday",
     "title": "Clean Up, Jerk Over",
